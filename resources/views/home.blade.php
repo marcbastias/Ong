@@ -1,3 +1,3 @@
 <x-app-layout>
-    HOLA MUNDO
+    HOLA MUNDO ADIOS
 </x-app-layout>
