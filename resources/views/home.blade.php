@@ -1,1 +1,3 @@
-<h1>HOLA</h1>
+<x-app-layout>
+    HOLA MUNDO
+</x-app-layout>

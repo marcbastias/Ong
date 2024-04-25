@@ -65,7 +65,7 @@ return [
 
 
     'logo' => '<span class="d-inline-block align-middle"></span>',
-    'logo_img' => 'vendor/adminlte/dist/img/logo.svg',
+    'logo_img' => 'vendor/adminlte/dist/img/logo.png',
     'logo_img_class' => 'img-fluid', // Clase para hacer que la imagen del logo sea fluida y se ajuste al contenedor
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'd-none', // Oculta la versión grande del logo
