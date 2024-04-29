@@ -13,7 +13,7 @@ Route::get('/auth/{provider}/redirect', [SocialController::class, 'redirect']);
 Route::get('/auth/{provider}/callback', [SocialController::class, 'callback']);
 
 Route::get('/', function () {
-    return view('home');
+    return view('front-client.home');
 });
 
 Route::controller(UneteController::class)->group(function () {
