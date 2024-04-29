@@ -5,6 +5,9 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\UneteController;
 use App\Http\Controllers\SocialController;
 
+
+
+
 Route::get('/auth/{provider}/redirect', [SocialController::class, 'redirect']);
 Route::get('/auth/{provider}/callback', [SocialController::class, 'callback']);
 

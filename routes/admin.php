@@ -10,7 +10,7 @@ use App\Http\Controllers\Admin\RoleController;
 
 Route::get('/', [AdminHomeController::class, 'index'])->middleware('can:admin.home')->name('admin.home');
 
-Route::resource('users', UserController::class)->only(['index', 'edit', 'update'])->names('admin.users');
+Route::resource('users', UserController::class)->only(['index', 'edit', 'update', 'create', 'store'])->names('admin.users');
 
 Route::resource('roles', RoleController::class)->names('admin.roles');
 
