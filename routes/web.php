@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PrivacidadController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UneteController;
@@ -19,6 +20,10 @@ Route::controller(UneteController::class)->group(function () {
     Route::get('/unete/{section}', 'index')->name('unete.index');
 });
 
+Route::controller(PrivacidadController::class)->group(function () {
+    Route::get('/privacidad/politica-privacidad', 'privacy')->name('privacidad.policy');
+    Route::get('/privacidad/terminos-condiciones', 'index')->name('privacidad.terminos-condiciones');
+});
 
 Route::controller(PostController::class)->group(function () {
     Route::get('/posts', 'index')->name('posts.index');
