@@ -10,6 +10,7 @@
 }
 
 :root {
+    --primary-font: "Inter", sans-serif;
     --color-primary: #8AB469;
     --color-secondary: #404040;
     --another-color: #7ECA42;
