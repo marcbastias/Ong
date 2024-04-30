@@ -23,32 +23,37 @@
     @livewireStyles
 </head>
 
-<body class="font-sans antialiased">
+<body class="">
     <x-banner />
-
-    <div class="min-h-screen">
-        @livewire('navigation')
-        <!-- Page Content -->
-        <main>
-            <div style="background-color: var(--color-secondary);"
-                class="bg-gray-300 h-100vh flex flex-col justify-center items-center mx-auto p-4">
-                <h1 class="mt-12 mb-16 text-white text-4xl font-bold">
-                    {{ $title ?? 'Título predeterminado' }}</h1>
-                <p class="mb-10 text-white text-center text-base max-w-4xl">
-                    {{ $content ?? 'Contenido predeterminado' }}</p>
-                {{ $slot }}
-            </div>
+    @livewire('navigation')
 
 
+    <div style="background-color: var(--color-secondary); max-height: 100vh; overflow-y: auto;"
+        class="bg-gray-300 h-100vh flex flex-col justify-center items-center p-4">
+        <h1 class="mt-12 mb-16 text-white text-4xl font-bold">
+            {{ $title }}</h1>
+        <p class="mb-10 text-white text-center text-base max-w-4xl">
+            {{ $content }}</p>
+        {{ $slot }}
 
-
-
-
-        </main>
     </div>
+    <div class="max-w-6xl mx-auto">
 
+        @isset($headings)
+            @foreach ($headings as $heading)
+                {{ $heading['text'] }}</h1>
+            @endforeach
+        @endisset
+
+        @isset($paragraphs)
+            @foreach ($paragraphs as $paragraph)
+                {{ $paragraph['text'] }}</p>
+            @endforeach
+        @endisset
+
+        {{ $additionalContent ?? '' }}
+    </div> <!-- Fin del nuevo div -->
     @stack('modals')
-
     @livewireScripts
 </body>
 
