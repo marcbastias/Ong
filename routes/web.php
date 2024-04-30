@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UneteController;
 use App\Http\Controllers\SocialController;
+use App\Http\Controllers\InformateController;
 
 
 
@@ -32,6 +33,34 @@ Route::controller(PostController::class)->group(function () {
     Route::get('/tag/{tag}', 'tag')->name('posts.tag');
 });
 
+
+Route::controller(InformateController::class)->group(function () {
+    Route::get('/informate/newsletter', 'index')->name('informate.index');
+});
+
+Route::get('/informate/blog', function () {
+});
+
+Route::get('/informate/contacta', function () {
+});
+
+Route::get('/trabajo/especies', function () {
+});
+
+Route::get('/trabajo/voluntariado', function () {
+});
+
+Route::get('/colabora/adopta', function () {
+});
+
+Route::get('/colabora/donaciones', function () {
+});
+
+Route::get('/colabora/animales-amenazados', function () {
+});
+
+Route::get('/colabora/animales-explotados', function () {
+});
 
 
 
