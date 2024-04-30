@@ -1,5 +1,5 @@
 <x-privacy-layout>
-    <x-slot name="title">POLITICA DE PRIVACIDAD</x-slot>
+    <x-slot name="title">TÉRMINOS Y CONDICIONES</x-slot>
     <x-slot name="content">
         La Fundación Patitas Amigas ("nosotros", "nuestro" o "nosotros") se compromete a proteger la
         privacidad de los usuarios ("usted" o "su") de nuestro sitio web y cualquier otro servicio que ofrecemos. Esta
@@ -8,7 +8,7 @@
     </x-slot>
 
     <x-slot name="additionalContent">
-        <div class="max-w-6xl mx-auto pt-10"> <!-- Nuevo div -->
+        <div class="max-w-6xl mx-auto"> <!-- Nuevo div -->
             <!-- Contenido adicional aquí -->
             @foreach ($headings as $index => $heading)
                 <div class="text-center mb-10">
@@ -23,7 +23,7 @@
 
                 </div>
                 @if (isset($paragraphs[$index]))
-                    <p class="mb-10 text-black text-center text-base max-w-3xl mx-auto">
+                    <p class="mb-10 text-black text-center text-base ">
                         {{ $paragraphs[$index]['text'] }}
                     </p>
                 @endif

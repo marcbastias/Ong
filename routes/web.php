@@ -16,13 +16,20 @@ Route::get('/', function () {
     return view('front-client.home');
 });
 
+Route::get('/contacto', 'ContactoController@index')->name('contacto.index');
+Route::controller(UneteController::class)->group(function () {
+    Route::get('/unete/{section}', 'index')->name('unete.index');
+});
+
+
 Route::controller(UneteController::class)->group(function () {
     Route::get('/unete/{section}', 'index')->name('unete.index');
 });
 
 Route::controller(PrivacidadController::class)->group(function () {
     Route::get('/privacidad/politica-privacidad', 'privacy')->name('privacidad.policy');
-    Route::get('/privacidad/terminos-condiciones', 'index')->name('privacidad.terminos-condiciones');
+    Route::get('/privacidad/terminos-condiciones', 'terms')->name('privacidad.terminos-condiciones');
+    Route::get('/privacidad/cookies', 'cookies')->name('privacidad.cookies');
 });
 
 Route::controller(PostController::class)->group(function () {
