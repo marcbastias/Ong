@@ -14,9 +14,15 @@ Route::get('/auth/{provider}/callback', [SocialController::class, 'callback']);
 Route::get('/', function () {
     return view('front-client.home');
 });
+Route::get('/somos', function () {
+    return view('front-client.somos');
+});
+
+
 
 Route::controller(UneteController::class)->group(function () {
-    Route::get('/unete/{section}', 'index')->name('unete.index');
+    // Route::get('/unete/{section}', 'index')->name('unete.index');
+    Route::view('/unete', 'unete')->name('unete.index');
 });
 
 
