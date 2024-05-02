@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\PrivacidadController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UneteController;
 use App\Http\Controllers\SocialController;
+use App\Http\Controllers\InformateController;
 
 
 
@@ -20,11 +22,22 @@ Route::get('/somos', function () {
 
 
 
+Route::get('/contacto', 'ContactoController@index')->name('contacto.index');
 Route::controller(UneteController::class)->group(function () {
     // Route::get('/unete/{section}', 'index')->name('unete.index');
     Route::view('/unete', 'unete')->name('unete.index');
 });
 
+
+Route::controller(UneteController::class)->group(function () {
+    Route::get('/unete/{section}', 'index')->name('unete.index');
+});
+
+Route::controller(PrivacidadController::class)->group(function () {
+    Route::get('/privacidad/politica-privacidad', 'privacy')->name('privacidad.policy');
+    Route::get('/privacidad/terminos-condiciones', 'terms')->name('privacidad.terminos-condiciones');
+    Route::get('/privacidad/cookies', 'cookies')->name('privacidad.cookies');
+});
 
 Route::controller(PostController::class)->group(function () {
     Route::get('/posts', 'index')->name('posts.index');
@@ -33,6 +46,34 @@ Route::controller(PostController::class)->group(function () {
     Route::get('/tag/{tag}', 'tag')->name('posts.tag');
 });
 
+
+Route::controller(InformateController::class)->group(function () {
+    Route::get('/informate/newsletter', 'index')->name('informate.index');
+});
+
+Route::get('/informate/blog', function () {
+});
+
+Route::get('/informate/contacta', function () {
+});
+
+Route::get('/trabajo/especies', function () {
+});
+
+Route::get('/trabajo/voluntariado', function () {
+});
+
+Route::get('/colabora/adopta', function () {
+});
+
+Route::get('/colabora/donaciones', function () {
+});
+
+Route::get('/colabora/animales-amenazados', function () {
+});
+
+Route::get('/colabora/animales-explotados', function () {
+});
 
 
 

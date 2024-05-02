@@ -38,8 +38,9 @@
             </div>
             <div class="form-group">
                 {!! Form::label('roles', 'Roles') !!}
-                {!! Form::select('roles[]', $roles, null, ['class' => 'form-control', 'multiple']) !!}
+                {!! Form::select('roles[]', $roles->pluck('name', 'id'), null, ['class' => 'form-control', 'multiple']) !!}
             </div>
+
             <div class="form-group">
                 {!! Form::submit('Create User', ['class' => 'btn btn-primary']) !!}
             </div>

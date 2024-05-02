@@ -314,19 +314,28 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
+
         [
-            'text'        => 'Dashboard',
+            'text'        => 'INICIO',
             'route'         => 'admin.home',
             'icon'        => 'fas fa-fw fa-tachometer-alt',
             'label_color' => 'success',
             'can'         => 'admin.home'
         ],
+        ['header' => 'CONTROL DE USUARIOS'],
         [
-            'text'        => 'Users',
+            'text'        => 'Lista de usuarios',
             'route'         => 'admin.users.index',
             'icon'        => 'fas fa-users fa-fw',
             'label_color' => 'success',
             'can'         => 'admin.users.index'
+        ],
+        [
+            'text'        => 'Mensajes',
+            'route'       => 'admin.mensajes.index',
+            'icon'        => 'fas fa-envelope fa-fw',
+            'label_color' => 'success',
+            'can'         => 'admin.mensajes.index'
         ],
         [
             'text'        => 'Role list',
@@ -336,7 +345,22 @@ return [
             /*             'can'         => 'admin.users.index'
  */
         ],
+
+
+        ['header' => 'BLOG OPTIONS'],
+
         [
+            'text'       => 'Post list',
+            'route'        => 'admin.posts.index',
+            'icon'        => 'fas fa-fw fa-clipboard',
+            'can'         => 'admin.posts.index'
+        ],
+        [
+            'text'       => 'Create new post',
+            'route'        => 'admin.posts.create',
+            'icon'        => 'fas fa-fw fa-file',
+            'can'         => 'admin.posts.create'
+        ], [
             'text' => 'Categories',
             'route'  => 'admin.categories.index',
             'icon' => 'fab fa-fw fa-buffer',
@@ -351,19 +375,6 @@ return [
             'can'         => 'admin.tags.index'
         ],
 
-        ['header' => 'BLOG OPTIONS'],
-        [
-            'text'       => 'Post list',
-            'route'        => 'admin.posts.index',
-            'icon'        => 'fas fa-fw fa-clipboard',
-            'can'         => 'admin.posts.index'
-        ],
-        [
-            'text'       => 'Create new post',
-            'route'        => 'admin.posts.create',
-            'icon'        => 'fas fa-fw fa-file',
-            'can'         => 'admin.posts.create'
-        ],
     ],
 
     /*
