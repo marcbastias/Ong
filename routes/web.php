@@ -22,7 +22,6 @@ Route::controller(UneteController::class)->group(function () {
     Route::get('/unete/{section}', 'index')->name('unete.index');
 });
 
-
 Route::controller(UneteController::class)->group(function () {
     Route::get('/unete/{section}', 'index')->name('unete.index');
 });
@@ -39,7 +38,6 @@ Route::controller(PostController::class)->group(function () {
     Route::get('/category/{category}', 'category')->name('posts.category');
     Route::get('/tag/{tag}', 'tag')->name('posts.tag');
 });
-
 
 Route::controller(InformateController::class)->group(function () {
     Route::get('/informate/newsletter', 'index')->name('informate.index');
@@ -64,6 +62,7 @@ Route::get('/colabora/donaciones', function () {
 });
 
 Route::get('/colabora/animales-amenazados', function () {
+    
 });
 
 Route::get('/colabora/animales-explotados', function () {
