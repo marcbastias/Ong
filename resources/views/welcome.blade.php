@@ -1,3 +1,3 @@
 <x-app-layout>
-    HOLA MUNDO
+    HOMUNDOLA 
 </x-app-layout>
