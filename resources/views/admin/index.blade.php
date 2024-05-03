@@ -8,10 +8,10 @@
 
 @section('content')
     <div class="row">
+        
         <div class="col-md-3">
-            <div class="bg-primary text-white p-3 mb-3">
-                Recuadro 1
-            </div>
+            <x-mary-progress-radial value="98" class="text-success" style="--size:6rem; --thickness: 2px" />
+
         </div>
         <div class="col-md-3">
             <div class="bg-secondary text-white p-3 mb-3">
@@ -46,7 +46,10 @@
 @stop
 
 @section('css')
+
     <link rel="stylesheet" href="/css/admin_custom.css">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 @stop
 
 @section('js')

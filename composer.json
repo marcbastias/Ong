@@ -14,8 +14,9 @@
         "laravel/socialite": "^5.13",
         "laravel/tinker": "^2.8",
         "laravelcollective/html": "^6.4",
-        "livewire/livewire": "^3.0",
+        "livewire/livewire": "^3.4",
         "phpseclib/phpseclib": "^3.0",
+        "robsontenorio/mary": "^1.30",
         "spatie/laravel-permission": "^6.3"
     },
     "require-dev": {
