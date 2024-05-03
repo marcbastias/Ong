@@ -3,7 +3,7 @@
         <ul class="flex items-center justify-center gap-10">
             <div class="flex gap-10 text-xl font-mono">
                 <li><a href="/" class="text-white hover:text-black">Inicio</a></li>
-                <li><a href="/" class="text-white hover:text-black">Somos</a></li>
+                <li><a href="/somos" class="text-white hover:text-black">Somos</a></li>
                 <li class="relative">
                     <a href="#" class="text-white hover:text-black" onclick="toggleDropdown(event, 'informate')">Informate</a>
                     <div id="informate" class="absolute bg-white p-4 rounded-md shadow-lg hidden border border-gray-300 z-10 transform origin-top transition-all duration-300 ease-in-out scale-y-0" data-visible="false" onclick="event.stopPropagation()">
