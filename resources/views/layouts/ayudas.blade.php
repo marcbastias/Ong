@@ -1,53 +1,37 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Aplicación</title>
-    <!-- Aquí puedes agregar tus enlaces CSS -->
-    <style>
-        .animal-section {
-            display: flex;
-            align-items: center;
-        }
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        .animal-image {
-            width: 50%;
-            float: left;
-            margin-right: 20px;
-        }
+    <title>{{ config('help.name', 'Laravel') }}</title>
 
-        .animal-content {
-            width: 50%;
-        }
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
-        .carousel-section {
-            /* Estilos para el carrusel */
-        }
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles
 
-        .form-section {
-            /* Estilos para el formulario */
-        }
-    </style>
 </head>
 <body>
-    <!-- Encabezado común -->
-    <header>
-        <!-- Incluir el componente de navegación -->
-        @include('partials.navigation')
-    </header>
+    <x-banner />
+    @livewire('navigation')
 
-    <!-- Contenido de la página -->
-    <div class="container">
-        <!-- El contenido de la página se insertará aquí -->
-        @yield('content')
-    </div>
-
-    <!-- Pie de página común -->
-    <footer>
-        <!-- Contenido del footer -->
-    </footer>
-
-    <!-- Scripts JavaScript -->
+        <div class="container mx-auto py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Contenido a la izquierda -->
+                <div>
+                    <h1 class="text-3xl font-bold mb-4">{{ $titulo }}</h1>
+                    <!-- Otros elementos de contenido -->
+                </div>
+                <!-- Otros elementos del diseño -->
+            </div>
+        </div>
 </body>
 </html>

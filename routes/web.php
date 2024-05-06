@@ -1,86 +1,58 @@
 <?php
 
-use App\Http\Controllers\PrivacidadController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\UneteController;
+use App\Http\Controllers\ColaboraController;
 use App\Http\Controllers\SocialController;
+use App\Http\Controllers\PrivacidadController;
 use App\Http\Controllers\InformateController;
+use Illuminate\Support\Facades\Route;
 
-
-
-
+// Rutas para autenticación social
 Route::get('/auth/{provider}/redirect', [SocialController::class, 'redirect']);
 Route::get('/auth/{provider}/callback', [SocialController::class, 'callback']);
 
-Route::get('/', function () {
-    return view('front-client.home');
+// Rutas para páginas estáticas
+Route::view('/', 'front-client.home');
+Route::view('/somos', 'front-client.somos');
+Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto.index');
+
+// Rutas para la sección "Únete"
+Route::get('/unete/{section}', [ColaboraController::class, 'index'])->name('unete.index');
+
+// Rutas para la sección de Privacidad
+Route::prefix('privacidad')->group(function () {
+    Route::get('/politica-privacidad', [PrivacidadController::class, 'privacy'])->name('privacidad.policy');
+    Route::get('/terminos-condiciones', [PrivacidadController::class, 'terms'])->name('privacidad.terms');
+    Route::get('/cookies', [PrivacidadController::class, 'cookies'])->name('privacidad.cookies');
 });
 
-Route::get('/somos', function () {
-    return view('front-client.somos');
+// Rutas para la sección "Informate"
+Route::prefix('informate')->group(function () {
+    Route::get('/newsletter', [InformateController::class, 'index'])->name('informate.newsletter');
+    Route::view('/blog', 'front-client.informate.blog');
+    Route::view('/contacta', 'front-client.informate.contacta');
 });
 
-Route::get('/contacto', 'ContactoController@index')->name('contacto.index');
-Route::controller(UneteController::class)->group(function () {
-    Route::get('/unete/{section}', 'index')->name('unete.index');
+// Rutas para la sección "Trabajo"
+Route::prefix('trabajo')->group(function () {
+    Route::view('/especies', 'front-client.trabajo.especies');
+    Route::view('/voluntariado', 'front-client.trabajo.voluntariado');
 });
 
-Route::controller(UneteController::class)->group(function () {
-    Route::get('/unete/{section}', 'index')->name('unete.index');
+// Rutas para la sección "Colabora"
+Route::prefix('colabora')->group(function () {
+    Route::get('/adopta', [ColaboraController::class, 'adopta'])->name('colabora.adopta');
+    Route::view('/donaciones', 'front-client.colabora.donaciones');
+    Route::view('/animales-amenazados', 'front-client.colabora.animales-amenazados');
+    Route::view('/animales-explotados', 'front-client.colabora.animales-explotados');
 });
 
-Route::controller(PrivacidadController::class)->group(function () {
-    Route::get('/privacidad/politica-privacidad', 'privacy')->name('privacidad.policy');
-    Route::get('/privacidad/terminos-condiciones', 'terms')->name('privacidad.terminos-condiciones');
-    Route::get('/privacidad/cookies', 'cookies')->name('privacidad.cookies');
-});
-
-Route::controller(PostController::class)->group(function () {
-    Route::get('/posts', 'index')->name('posts.index');
-    Route::get('/posts/{post}', 'show')->name('posts.show');
-    Route::get('/category/{category}', 'category')->name('posts.category');
-    Route::get('/tag/{tag}', 'tag')->name('posts.tag');
-});
-
-Route::controller(InformateController::class)->group(function () {
-    Route::get('/informate/newsletter', 'index')->name('informate.index');
-});
-
-Route::get('/informate/blog', function () {
-});
-
-Route::get('/informate/contacta', function () {
-});
-
-Route::get('/trabajo/especies', function () {
-});
-
-Route::get('/trabajo/voluntariado', function () {
-});
-
-Route::get('/colabora/adopta', function () {
-});
-
-Route::get('/colabora/donaciones', function () {
-});
-
-Route::get('/colabora/animales-amenazados', function () {
-    
-});
-
-Route::get('/colabora/animales-explotados', function () {
-});
-
-
-
-
+// Ruta de Dashboard
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
+])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
