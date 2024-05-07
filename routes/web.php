@@ -48,7 +48,7 @@ Route::prefix('colabora')->group(function () {
     Route::view('/animales-explotados', 'front-client.colabora.animales-explotados');
 });
 
-// Ruta de Dashboard
+// Ruta de Dashboarddgfd
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
