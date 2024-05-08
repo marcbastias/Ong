@@ -1,4 +1,4 @@
-<div>
+{{-- <div>
 
     <style>
    
@@ -234,4 +234,4 @@
             updateSlide();
         }
     </script>
-</div>
+</div> --}}

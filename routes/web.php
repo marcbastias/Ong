@@ -43,9 +43,8 @@ Route::prefix('trabajo')->group(function () {
 // Rutas para la sección "Colabora"
 Route::prefix('colabora')->group(function () {
     Route::get('/adopta', [ColaboraController::class, 'adopta'])->name('colabora.adopta');
-    Route::view('/donaciones', 'front-client.colabora.donaciones');
-    Route::view('/animales-amenazados', 'front-client.colabora.animales-amenazados');
-    Route::view('/animales-explotados', 'front-client.colabora.animales-explotados');
+    Route::get('/animalesAmenazados',[ColaboraController::class, 'animalesAmenazados'])->name('colabora.animalesAmenazados');
+    Route::get('/animalesExplotados',[ColaboraController::class, 'animalesExplotados'])->name('colabora.animalesExplotados');
 });
 
 // Ruta de Dashboard
