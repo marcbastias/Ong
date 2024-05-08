@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Storage; // Importa la clase Storage
+
 use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
@@ -38,9 +40,29 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        // Asignar roles
         $user->roles()->sync($request->roles);
-        return redirect()->route('admin.users.edit', $user)->with('info', 'Role assigned successfully');
+    
+        // Actualizar foto del usuario
+        if ($request->hasFile('photo')) {
+            // Eliminar la foto anterior si existe
+            if ($user->photo) {
+                Storage::delete($user->photo);
+            }
+    
+            // Almacenar la nueva foto
+            $photo = $request->file('photo')->store('profiles');
+    
+            // Asignar la nueva foto al usuario
+            $user->photo = $photo;
+        }
+    
+        // Guardar los cambios en el usuario
+        $user->save();
+    
+        return redirect()->route('admin.users.edit', $user)->with('info', 'Role assigned and photo updated successfully');
     }
+    
 
     public function create()
     {

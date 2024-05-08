@@ -1,53 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Aplicación</title>
-    <!-- Aquí puedes agregar tus enlaces CSS -->
-    <style>
-        .animal-section {
-            display: flex;
-            align-items: center;
-        }
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        .animal-image {
-            width: 50%;
-            float: left;
-            margin-right: 20px;
-        }
+        <title>{{ config('app.name', 'Laravel') }}</title>
 
-        .animal-content {
-            width: 50%;
-        }
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-        .carousel-section {
-            /* Estilos para el carrusel */
-        }
+        <!-- Scripts -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-        .form-section {
-            /* Estilos para el formulario */
-        }
-    </style>
-</head>
-<body>
-    <!-- Encabezado común -->
-    <header>
-        <!-- Incluir el componente de navegación -->
-        @include('partials.navigation')
-    </header>
+        <!-- Styles -->
+        @livewireStyles
+    </head>
+    <body>
+        <div class="font-sans text-gray-900 antialiased">
+            {{ $slot }}
+        </div>
 
-    <!-- Contenido de la página -->
-    <div class="container">
-        <!-- El contenido de la página se insertará aquí -->
-        @yield('content')
-    </div>
-
-    <!-- Pie de página común -->
-    <footer>
-        <!-- Contenido del footer -->
-    </footer>
-
-    <!-- Scripts JavaScript -->
-</body>
+        @livewireScripts
+    </body>
 </html>
