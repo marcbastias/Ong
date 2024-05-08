@@ -27,6 +27,13 @@
                         </label>
                     </div>
                 @endforeach
+
+                {{-- Agregar el campo para cargar la foto --}}
+                <div class="form-group">
+                    <label for="photo">Photo:</label>
+                    <input type="file" class="form-control-file" id="photo" name="photo">
+                </div>
+
                 {!! Form::submit('Role assign', ['class'=> 'btn btn-primary mt-3']) !!}
             {!! Form::close() !!}
         </div>
@@ -40,5 +47,3 @@
 @section('js')
     <script> console.log('Hi!'); </script>
 @stop
-
-{{-- https://github.com/jeroennoten/Laravel-AdminLTE/wiki/ --}}

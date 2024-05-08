@@ -27,7 +27,6 @@
     <x-banner />
     @livewire('navigation')
 
-
     <div style="background-color: var(--color-secondary); max-height: 100vh; overflow-y: auto;"
         class="bg-gray-300 h-100vh flex flex-col justify-center items-center p-4">
         <h1 class="mt-12 mb-16 text-white text-4xl font-bold">
