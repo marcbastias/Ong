@@ -36,11 +36,11 @@
             <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-2 sm:mb-4 px-28">{{ $titulo }}</h1>
             <h3 class="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-4 px-28">{{ $texto }}</h3>
         </div>
-        <div class={{ 'w-auto ml-auto  pb-4 pl-4' }}>
+        <div class='w-auto ml-auto  mb-auto pl-10'>
             <img src="{{ $imagen }}" alt="" class="object-cover shadow-2xl shadow-zinc-900">
         </div>
     </div>
-    <div class="text-center py-44 font-bold">
+    <div class="text-center mt-40 font-bold">
         <h1 class="text-4xl text-white">{{ $segundoTitulo }}</h1>
     </div>
 
@@ -61,6 +61,8 @@
 
     <!-- Importar el componente de carrusel de adopción -->
     @livewire('carrusel-adopcion')
+
+    @livewire('formColabora')
 </body>
 
 </html>
