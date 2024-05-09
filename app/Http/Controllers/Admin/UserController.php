@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage; // Importa la clase Storage
 
 use Spatie\Permission\Models\Role;
@@ -121,5 +122,12 @@ class UserController extends Controller
         }
 
         return redirect()->route('admin.users.create')->with('success', 'Usuario creado exitosamente.');
+    }
+
+    public function perfil()
+    {
+        $user = Auth::user(); // Obtener el usuario autenticado
+        // Lógica para mostrar el perfil del usuario
+        return view('admin.users.profile', compact('user'));
     }
 }
