@@ -17,8 +17,6 @@ Route::view('/', 'front-client.home');
 Route::view('/somos', 'front-client.somos');
 Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto.index');
 
-// Rutas para la sección "Únete"
-Route::get('/unete/{section}', [ColaboraController::class, 'index'])->name('unete.index');
 
 // Rutas para la sección de Privacidad
 Route::prefix('privacidad')->group(function () {
@@ -39,7 +37,12 @@ Route::prefix('trabajo')->group(function () {
     Route::view('/especies', 'front-client.trabajo.especies');
     Route::view('/voluntariado', 'front-client.trabajo.voluntariado');
 });
-
+Route::controller(PostController::class)->group(function () {
+    Route::get('/posts', 'index')->name('posts.index');
+    Route::get('/posts/{post}', 'show')->name('posts.show');
+    Route::get('/category/{category}', 'category')->name('posts.category');
+    Route::get('/tag/{tag}', 'tag')->name('posts.tag');
+});
 // Rutas para la sección "Colabora"
 Route::prefix('colabora')->group(function () {
     Route::get('/adopta', [ColaboraController::class, 'adopta'])->name('colabora.adopta');

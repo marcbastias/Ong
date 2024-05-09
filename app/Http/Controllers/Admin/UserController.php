@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -42,27 +43,41 @@ class UserController extends Controller
     {
         // Asignar roles
         $user->roles()->sync($request->roles);
-    
+
         // Actualizar foto del usuario
         if ($request->hasFile('photo')) {
             // Eliminar la foto anterior si existe
             if ($user->photo) {
                 Storage::delete($user->photo);
             }
-    
-            // Almacenar la nueva foto
-            $photo = $request->file('photo')->store('profiles');
-    
-            // Asignar la nueva foto al usuario
-            $user->photo = $photo;
+
+            // Almacenar la nueva foto en el sistema de archivos
+            $photoPath = $request->file('photo')->store('public/profiles');
+
+            // Guardar la ruta de la foto en el modelo User
+            $user->photo = $photoPath;
         }
-    
+
         // Guardar los cambios en el usuario
         $user->save();
-    
+
         return redirect()->route('admin.users.edit', $user)->with('info', 'Role assigned and photo updated successfully');
     }
-    
+
+
+    public function destroy(User $user)
+    {
+        // Eliminar la foto del usuario si existe
+        if ($user->photo) {
+            Storage::delete($user->photo);
+        }
+
+        // Eliminar al usuario
+        $user->delete();
+
+        return Redirect::back()->with('success', 'Usuario eliminado correctamente.');
+    }
+
 
     public function create()
     {

@@ -12,6 +12,8 @@ Route::get('/', [AdminHomeController::class, 'index'])->middleware('can:admin.ho
 
 Route::resource('users', UserController::class)->only(['index', 'edit', 'update', 'create', 'store'])->names('admin.users');
 
+Route::delete('users/{user}', [UserController::class, 'destroy'])->name('admin.users.destroy');
+
 Route::resource('roles', RoleController::class)->names('admin.roles');
 
 Route::resource('categories', CategoryController::class)->except('show')->names('admin.categories');
