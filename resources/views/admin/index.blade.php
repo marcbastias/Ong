@@ -1,8 +1,10 @@
 @extends('adminlte::page')
 
 @section('title', 'DASHBOARD')
+@section('title', 'DASHBOARD')
 
 @section('content_header')
+    <h1>Dashboard</h1>
     <h1>Dashboard</h1>
 @stop
 @section('content')
@@ -489,7 +491,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 @stop
 @section('css')
@@ -635,6 +636,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
         integrity="sha512-something-unique" crossorigin="anonymous"></script>
     <script>
+        function toggleFichado() {
+            var button = document.getElementById("fichadoButton");
+            if (button.innerText === "Fichado") {
+                button.innerText = "No Fichado";
+                button.classList.remove("btn-success");
+                button.classList.add("btn-outline-light");
+            } else {
+                button.innerText = "Fichado";
+                button.classList.remove("btn-outline-light");
+                button.classList.add("btn-success");
+            }
+        }
         function toggleFichado() {
             var button = document.getElementById("fichadoButton");
             if (button.innerText === "Fichado") {
