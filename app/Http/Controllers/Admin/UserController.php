@@ -107,4 +107,11 @@ class UserController extends Controller
 
         return redirect()->route('admin.users.create')->with('success', 'Usuario creado exitosamente.');
     }
+
+    public function All_users()
+    {
+        $usersCount = User::count(); // Obtiene la cantidad total de usuarios
+        return view('admin.index', [ 'usersCount' => $usersCount]);
+    }
+    
 }

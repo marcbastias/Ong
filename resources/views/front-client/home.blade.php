@@ -41,8 +41,5 @@
             <section><img src="../storage/Rectangle 35.png" alt=""></section>
             <section><img src="../storage/Rectangle 36.png" alt=""></section>
         </div>
-        <footer class="py-4 border-t border-gray-300">
-            <!-- Pie de página -->
-            <p class="text-center text-gray-600">&copy; 2024 My Website. All rights reserved.</p>
-        </footer>
+
 </x-app-layout>

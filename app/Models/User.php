@@ -66,4 +66,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class);
     }
+    public function Total_Usuarios()
+{
+    $usersCount = User::count(); // Obtiene la cantidad total de usuarios
+    return view('admin.index', compact('usersCount'));
+}
 }
