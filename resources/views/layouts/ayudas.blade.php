@@ -62,7 +62,7 @@
     <!-- Importar el componente de carrusel de adopción -->
     @livewire('carrusel-adopcion')
 
-    @livewire('formColabora')
+    @livewire('FormColabora')
 </body>
 
 </html>

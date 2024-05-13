@@ -59,5 +59,4 @@ class ColaboraController extends Controller
 
         return view('front-client.animalesAmenazados', compact('titulo', 'texto', 'imagen', 'segundoTitulo'));
     }
-
 }
