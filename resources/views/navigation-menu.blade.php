@@ -206,7 +206,7 @@
                         </x-responsive-nav-link>
                     @endcan
 
-                    <!-- Team mateu tonto -->
+                    <!-- Team-->
                     @if (Auth::user()->allTeams()->count() > 1)
                         <div class="border-t border-gray-200"></div>
 

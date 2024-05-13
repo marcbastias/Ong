@@ -60,13 +60,12 @@
         </div>
 
         <a href="auth/google/redirect" class="inline-block rounded-full w-12 h-12 p-2 bg-gray-200 mt-4">
-            <img src="/storage/google.jpg" alt="" class="w-8 h-8 mx-auto" />
+            <img src="../assets/images/google.jpg" alt="" class="w-8 h-8 mx-auto" />
         </a>
 
         <div class="relative flex justify-end items-center h-full">
-            <img src="/storage/tigre.png" alt="" class="w-1/3 h-auto self-center absolute top-1/2 transform -translate-y-1/2">
+            <img src="../assets/images/tigre_login.png" alt="" class="w-1/3 h-auto self-center absolute top-1/2 transform -translate-y-1/2">
         </div>
-        
         
     </section>
 
