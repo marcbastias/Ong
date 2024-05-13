@@ -30,30 +30,39 @@
     <x-banner />
     @livewire('navigation')
 
-    <div class="container mx-auto py-12">
-        <div class="gap-8">
-            <!-- Contenido a la izquierda -->
-            <div class="text-white flex items-center justify-between">
-                <div>
-                    <h1 class="text-3xl font-bold mb-4">{{ $titulo }}</h1>
-                    <h3 class="text-lg font-semibold mb-6">{{ $texto }}</h3>
-                    <!-- Otros elementos de contenido -->
-                </div>
+    <div class=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-col-3 gap-2 justify-center items-center">
 
-            </div>
-            <div class="w-auto">
-                <img src="{{ $imagen }}" alt="Descripción de la imagen" class="mr-4 w-990 h-220">
-            </div>
-            <!-- Otros elementos del diseño -->
+        <div class="container mx-auto text-white">
+            <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-2 sm:mb-4 px-28">{{ $titulo }}</h1>
+            <h3 class="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-4 px-28">{{ $texto }}</h3>
         </div>
+        <div class='w-auto ml-auto  mb-auto pl-10'>
+            <img src="{{ $imagen }}" alt="" class="object-cover shadow-2xl shadow-zinc-900">
+        </div>
+    </div>
+    <div class="text-center mt-40 font-bold">
+        <h1 class="text-4xl text-white">{{ $segundoTitulo }}</h1>
     </div>
 
     <!-- Estilo para la palabra "conservar" -->
     <style>
-        .text-conservar {
+        .text-conservar-verde {
             color: #7ECA42;
         }
+
+        .text-conservar-rojo {
+            color: #CA4242;
+        }
+
+        .text-conservar-amarillo {
+            color: #BFCA42;
+        }
     </style>
+
+    <!-- Importar el componente de carrusel de adopción -->
+    @livewire('carrusel-adopcion')
+
+    @livewire('formColabora')
 </body>
 
 </html>

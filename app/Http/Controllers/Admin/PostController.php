@@ -115,4 +115,9 @@ class PostController extends Controller
         return redirect()->route('admin.posts.index', $post)->with('info', 'Post delted successfully');
 
     }
+    public function All_post()
+    {
+        $postCount = Post::count(); // Obtiene la cantidad total de usuarios
+        return view('admin.index', [ 'postCount' => $postCount]);
+    }
 }

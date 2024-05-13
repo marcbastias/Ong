@@ -112,7 +112,7 @@ return [
     'preloader' => [
         'enabled' => true,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => 'vendor/adminlte/dist/img/logo.png',
             'alt' => 'AdminLTE Preloader Image',
             'effect' => 'animation__shake',
             'width' => 60,
@@ -133,11 +133,11 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
+    'usermenu_header' => true,
     'usermenu_header_class' => 'bg-primary',
-    'usermenu_image' => false,
-    'usermenu_desc' => false,
-    'usermenu_profile_url' => false,
+    'usermenu_image' => true,
+    'usermenu_desc' => true,
+    'usermenu_profile_url' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -189,17 +189,18 @@ return [
     |
     */
 
-    'classes_body' => '',
-    'classes_brand' => '',
+    'classes_body' => 'bg-white font-sans antialiased',
+    'classes_brand' => 'bg-blue-500 text-white',
     'classes_brand_text' => '',
-    'classes_content_wrapper' => '',
+    'classes_content_wrapper' => 'min-h-screen bg-gray-100',
     'classes_content_header' => '',
-    'classes_content' => '',
+    'classes_content' => 'max-w-7xl mx-auto py-6 sm:px-6 lg:px-8',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'bg-custom-color-dashboard navbar-light text-white',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
+
 
     /*
     |--------------------------------------------------------------------------
@@ -295,6 +296,12 @@ return [
     'menu' => [
         // Navbar items:
         [
+            'text' => 'Perfil',
+            'route' => 'profile.show', // Debes definir esta ruta en tu archivo de rutas
+            'icon' => 'fas fa-user', // Icono para el enlace al perfil
+            'can' => 'profile.show', // Verificar si el usuario tiene permiso para ver su perfil
+        ],
+        [
             'type'         => 'navbar-search',
             'text'         => 'search',
             'topnav_right' => true,
@@ -309,12 +316,6 @@ return [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
-
         [
             'text'        => 'INICIO',
             'route'         => 'admin.home',

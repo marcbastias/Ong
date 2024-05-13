@@ -5,13 +5,18 @@
                 <li><a href="/" class="text-white hover:text-black">Inicio</a></li>
                 <li><a href="/somos" class="text-white hover:text-black">Somos</a></li>
                 <li class="relative">
-                    <a href="#" class="text-white hover:text-black" onclick="toggleDropdown(event, 'informate')">Informate</a>
-                    <div id="informate" class="absolute bg-white p-4 rounded-md shadow-lg hidden border border-gray-300 z-10 transform origin-top transition-all duration-300 ease-in-out scale-y-0" data-visible="false" onclick="event.stopPropagation()">
-                        <a href="#" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Newsletter</a>
+                    <a href="#" class="text-white hover:text-black"
+                        onclick="toggleDropdown(event, 'informate')">Informate</a>
+                    <div id="informate"
+                        class="absolute bg-white p-4 rounded-md shadow-lg hidden border border-gray-300 z-10 transform origin-top transition-all duration-300 ease-in-out scale-y-0"
+                        data-visible="false" onclick="event.stopPropagation()">
+                        <a href="#"
+                            class="block text-gray-800 py-2 px-4 transition-colors duration-300">Newsletter</a>
                         <div class="border-t border-gray-300"></div>
                         <a href="#" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Blog</a>
                         <div class="border-t border-gray-300"></div>
-                        <a href="#" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Contacta</a>
+                        <a href="#"
+                            class="block text-gray-800 py-2 px-4 transition-colors duration-300">Contacta</a>
                     </div>
                 </li>
             </div>
@@ -20,23 +25,32 @@
             </div>
             <div class="flex gap-10 text-xl font-mono">
                 <li class="relative">
-                    <a href="#" class="text-white hover:text-black" onclick="toggleDropdown(event, 'trabajo')">Nuestro Trabajo</a>
-                    <div id="trabajo" class="absolute bg-white p-4 rounded-md shadow-lg hidden border border-gray-300 z-10 transform origin-top transition-all duration-300 ease-in-out scale-y-0" data-visible="false" onclick="event.stopPropagation()">
-                        <a href="#" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Especies</a>
+                    <a href="#" class="text-white hover:text-black"
+                        onclick="toggleDropdown(event, 'trabajo')">Nuestro Trabajo</a>
+                    <div id="trabajo"
+                        class="absolute bg-white p-4 rounded-md shadow-lg hidden border border-gray-300 z-10 transform origin-top transition-all duration-300 ease-in-out scale-y-0"
+                        data-visible="false" onclick="event.stopPropagation()">
+                        <a href="/trabajo/especies"
+                            class="block text-gray-800 py-2 px-4 transition-colors duration-300">Especies</a>
                         <div class="border-t border-gray-300"></div>
-                        <a href="#" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Voluntariado</a>
+                        <a href="/trabajo/voluntariado"
+                            class="block text-gray-800 py-2 px-4 transition-colors duration-300">Voluntariado</a>
                     </div>
                 </li>
                 <li class="relative">
-                    <a href="#" class="text-white hover:text-black" onclick="toggleDropdown(event, 'colabora')">Colabora</a>
-                    <div id="colabora" class="absolute bg-white p-4 rounded-md shadow-lg hidden border border-gray-300 z-10 transform origin-top transition-all duration-300 ease-in-out scale-y-0" data-visible="false" onclick="event.stopPropagation()">
-                        <a href="/colabora/adopta" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Adopta</a>
+                    <a href="#" class="text-white hover:text-black"
+                        onclick="toggleDropdown(event, 'colabora')">Colabora</a>
+                    <div id="colabora"
+                        class="absolute bg-white p-4 rounded-md shadow-lg hidden border border-gray-300 z-10 transform origin-top transition-all duration-300 ease-in-out scale-y-0"
+                        data-visible="false" onclick="event.stopPropagation()">
+                        <a href="/colabora/adopta"
+                            class="block text-gray-800 py-2 px-4 transition-colors duration-300">Adopta</a>
                         <div class="border-t border-gray-300"></div>
-                        <a href="/colabora/donaciones" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Donaciones</a>
+                        <a href="/colabora/animalesAmenazados"
+                            class="block text-gray-800 py-2 px-4 transition-colors duration-300">Animales amenazados</a>
                         <div class="border-t border-gray-300"></div>
-                        <a href="/colabora/animales-amenazados" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Animales amenazados</a>
-                        <div class="border-t border-gray-300"></div>
-                        <a href="/colabora/animales-explotados" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Animales explotados</a>
+                        <a href="/colabora/animalesExplotados"
+                            class="block text-gray-800 py-2 px-4 transition-colors duration-300">Animales explotados</a>
                     </div>
                 </li>
             </div>
@@ -54,15 +68,15 @@
             closeDropdowns();
             return;
         }
-        
+
         closeDropdowns();
-        
+
         dropdown.classList.remove('hidden');
         dropdown.setAttribute('data-visible', 'true');
         setTimeout(() => {
             dropdown.classList.remove('scale-y-0');
             dropdown.classList.add('scale-y-100');
-        }, 10); 
+        }, 10);
     }
 
     function closeDropdowns() {
