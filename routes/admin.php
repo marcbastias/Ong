@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\MessagesController;
 
 Route::get('/', [AdminHomeController::class, 'index'])->middleware('can:admin.home')->name('admin.home');
 
@@ -23,3 +24,5 @@ Route::resource('categories', CategoryController::class)->except('show')->names(
 Route::resource('tags', TagController::class)->except('show')->names('admin.tags');
 
 Route::resource('posts', PostController::class)->except('show')->names('admin.posts');
+
+Route::get('messages', [MessagesController::class, 'index'])->name('messages');

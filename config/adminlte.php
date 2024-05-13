@@ -376,6 +376,57 @@ return [
             'can'         => 'admin.tags.index'
         ],
 
+        ['header' => 'GESTION DE ADMINISTRADOR'],
+
+        [
+            'text'       => 'Mensajes de formularios',
+            'route'        => 'admin.messages.index',
+            'icon'        => 'fas fa-fw fa-envelope',
+            'can'         => 'admin.messages.index'
+        ],
+        [
+            'text'       => 'Post list',
+            'route'        => 'admin.posts.index',
+            'icon'        => 'fas fa-fw fa-clipboard',
+            'can'         => 'admin.posts.index'
+        ],
+        [
+            'text'       => 'Post list',
+            'route'        => 'admin.posts.index',
+            'icon'        => 'fas fa-fw fa-clipboard',
+            'can'         => 'admin.posts.index'
+        ],
+        [
+            'text'       => 'Post list',
+            'route'        => 'admin.posts.index',
+            'icon'        => 'fas fa-fw fa-clipboard',
+            'can'         => 'admin.posts.index'
+        ],
+        [
+            'text'       => 'Post list',
+            'route'        => 'admin.posts.index',
+            'icon'        => 'fas fa-fw fa-clipboard',
+            'can'         => 'admin.posts.index'
+        ],
+        [
+            'text'       => 'Post list',
+            'route'        => 'admin.posts.index',
+            'icon'        => 'fas fa-fw fa-clipboard',
+            'can'         => 'admin.posts.index'
+        ],
+        [
+            'text'       => 'Post list',
+            'route'        => 'admin.posts.index',
+            'icon'        => 'fas fa-fw fa-clipboard',
+            'can'         => 'admin.posts.index'
+        ],
+        [
+            'text'       => 'Post list',
+            'route'        => 'admin.posts.index',
+            'icon'        => 'fas fa-fw fa-clipboard',
+            'can'         => 'admin.posts.index'
+        ],
+
     ],
 
     /*
@@ -459,11 +510,11 @@ return [
             ],
         ],
         'Sweetalert2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
-                    'asset' => false,
+                    'asset' => true,
                     'location' => '//cdn.jsdelivr.net/npm/sweetalert2@8',
                 ],
             ],
