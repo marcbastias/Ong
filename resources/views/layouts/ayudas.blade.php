@@ -32,7 +32,7 @@
 
     <div class=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-col-3 gap-2 justify-center items-center">
 
-        <div class="container mx-auto text-white">
+        <div class="container mx-auto text-white flex flex-col">
             <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-2 sm:mb-4 px-28">{{ $titulo }}</h1>
             <h3 class="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-4 px-28">{{ $texto }}</h3>
         </div>

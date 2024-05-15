@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ColaboraController;
@@ -13,7 +14,7 @@ Route::get('/auth/{provider}/redirect', [SocialController::class, 'redirect']);
 Route::get('/auth/{provider}/callback', [SocialController::class, 'callback']);
 
 // Rutas para páginas estáticas
-Route::view('/', 'front-client.home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::view('/somos', 'front-client.somos');
 Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto.index');
 

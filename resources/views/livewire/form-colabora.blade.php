@@ -32,6 +32,105 @@
             padding-right: 30px;
             /* Ajustar el espacio para la imagen */
         }
+
+        /* Estilos para los campos de entrada */
+        input[type="number"],
+        input[type="email"],
+        .range-input {
+            width: calc(100% - 20px);
+            /* Reducir el ancho en 20px para el borde */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="number"]:focus,
+        input[type="email"]:focus,
+        .range-input:focus {
+            outline: none;
+            border-color: #8AB469;
+        }
+
+        /* Estilo para las etiquetas */
+        label,
+        .range-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* Estilo para el botón de enviar */
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #8AB469;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #6e9741;
+        }
+
+        /* Estilos para la barra deslizante */
+        .range-container {
+            position: relative;
+            margin-bottom: 30px; /* Aumentado el espacio superior */
+        }
+
+        .range-label {
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 18px;
+            color: white;
+        }
+
+        .range-input {
+            width: 100%;
+            -webkit-appearance: none;
+            height: 15px;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            outline: none;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .range-input:hover {
+            opacity: 1;
+        }
+
+        .range-input::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #8AB469;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .range-input::-moz-range-thumb {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #8AB469;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 
@@ -65,10 +164,12 @@
                     onclick="handleButtonClick(this)">
                 <label for="anual" class="option">Anual</label>
             </div>
+            <br>
+            <div class="range-container">
+                <label for="cantidad" class="range-label">Cantidad a Donar: <span id="cantidad-value">$0</span></label>
+                <input type="range" id="cantidad" name="cantidad" min="0" max="100" value="0" class="range-input" oninput="updateAmount()">
+            </div>
 
-            <label for="cantidad" class="text-white block mb-2">Cantidad:</label>
-            <input type="number" id="cantidad" name="cantidad" placeholder="Ingrese la cantidad"
-                class="w-full border border-gray-300 px-4 py-2 mb-8">
             <hr class="my-8">
             <div class="mb-8 flex justify-center gap-28 p-4">
                 <input type="radio" id="formato_digital" name="formato" value="digital" class="mr-2 hidden"
@@ -80,16 +181,14 @@
             </div>
 
             <label for="correo" class="text-white block mb-2">Correo Electrónico:</label>
-            <input type="email" id="correo" name="correo" placeholder="Ingrese su correo electrónico"
-                class="w-full border border-gray-300 px-4 py-2 mb-8">
-
+            <input type="email" id="correo" name="correo" placeholder="Ingrese su correo electrónico" class="mb-8">
+            
             <div class="mb-8">
                 <input type="checkbox" id="proteccion_datos" name="proteccion_datos" class="mr-2">
                 <label class="text-white" for="proteccion_datos">Acepto la protección de datos</label>
             </div>
 
-            <button type="submit"
-                class="py-4 px-32 bg-[#8AB469] text-white flex justify-center items-center mx-auto">Enviar</button>
+            <button type="submit" class="py-4 px-32 bg-[#8AB469] text-white flex justify-center items-center mx-auto">Enviar</button>
         </div>
     </div>
 
@@ -113,6 +212,12 @@
                 // Desactivar la clase "selected" en el primer botón seleccionado
                 selectedOptions[0].classList.remove('selected');
             }
+        }
+
+        // Función para actualizar el valor de la cantidad a donar
+        function updateAmount() {
+            var rangeValue = document.getElementById('cantidad').value;
+            document.getElementById('cantidad-value').textContent = "$" + rangeValue;
         }
     </script>
 
