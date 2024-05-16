@@ -4,18 +4,19 @@
 
 </x-privacy-layout>
 <div class="content-page">
+    <h1 class="font-extrabold text-3xl mt-20">ELIJE LA PREFERENCIA DE FORMULARIO QUE NECESITES</h1>
     <div class="container relative">
         <button class="prev-btn absolute top-1/2 left-0 transform -translate-y-1/2" onclick="prevSlide()">
-            <svg xmlns="http://www.w3.org/2000/svg" class=" h-24 w-24" fill="none" viewBox="0 0 24 24"
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
             </svg>
         </button>
-        <input type="radio" name="slider" id="item-1" checked disabled>
-        <input type="radio" name="slider" id="item-2" disabled>
-        <input type="radio" name="slider" id="item-3" disabled>
-        <input type="radio" name="slider" id="item-4" disabled>
-        <input type="radio" name="slider" id="item-5" disabled>
+        <input type="radio" name="slider" id="item-1" checked>
+        <input type="radio" name="slider" id="item-2">
+        <input type="radio" name="slider" id="item-3">
+        <input type="radio" name="slider" id="item-4">
+        <input type="radio" name="slider" id="item-5">
 
         <div class="carousel-container cards">
             <label class="card" for="item-1" id="circle-1" onclick="selectCard(0)">
@@ -43,60 +44,321 @@
         </button>
     </div>
 
-    <label class="bg-black rounded-3xl text-2xl text-white p-8">ATENCION AL CLIENTE</label>
-    <div class="contact-form">
-        <h1 class="contact-form_title">CONTACTA CON EL EQUIPO DE PRENSA Y COMUNICACIÓN</h1>
-        <h5 class="contact-form_subtitle">Si las personas y la naturaleza se ven afectadas, tenemos algo que decir.
-            Puedes
-            contactar con nosotros para
+    <div id="attentionTitle" class="bg-black rounded-4xl text-2xl text-white pt-3 pb-3 pr-3 pl-3 mb-24"
+        style="border-radius: 25px;">
+        ATENCION AL CLIENTE</div>
+    <div id="form1"class="contact-form">
+        <h1 class="contact-form_title">wow</h1>
+        <h5 class="contact-form_subtitle">
+            Si las personas y la naturaleza se ven afectadas, tenemos algo que decir. Puedes contactar con nosotros para
             ampliar información sobre los temas ambientales que preocupan a la sociedad. Nuestro equipo está disponible
-            para
-            comentarios, entrevistas e información. Si lo que quieres es utilizar alguna de nuestras fotografías o
+            para comentarios, entrevistas e información. Si lo que quieres es utilizar alguna de nuestras fotografías o
             publicaciones, cuéntanos qué necesitas y para qué lo quieres usar. Envíanos tu consulta rellenando este
             formulario y nos pondremos en contacto contigo con la mayor brevedad posible. Si no puedes esperar, por
-            favor,
-            llámanos al teléfono (+34) 91 354 0578 en horario de lunes a jueves de 8 a 17.30h y los viernes de 8 a 14h.
+            favor, llámanos al teléfono (+34) 91 354 0578 en horario de lunes a jueves de 8 a 17.30h y los viernes de 8
+            a 14h.
         </h5>
 
         <form action="{{ route('contacto.store') }}" method="post" enctype="multipart/form-data"
             class="p-11 grid grid-cols-2 gap-4">
             @csrf
+            <div class="form-group col-span-1">
+                <label for="name">¿Quien eres?</label>
+                <input type="text"
+                    class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full" id="name"
+                    name="name" required>
+            </div>
+            <div class="form-group col-span-1">
+                <label for="media">¿En que medio trabajas?</label>
+                <input type="text" class=" border-2 border-customColor-principal bg-transparent p-2 w-full"
+                    id="media" name="media">
+            </div>
+            <div class="form-group col-span-1">
+                <label for="email">Correo electronico</label>
+                <input type="email"
+                    class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full" id="email"
+                    name="email" required>
+            </div>
+            <div class="form-group col-span-1">
+                <label for="phone">Telefono</label>
+                <input type="tel"
+                    class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full"
+                    id="phone" name="phone">
+            </div>
             <div class="form-group col-span-2">
-                <label for="name">Who are you?</label>
-                <input type="text" class="form-control" id="name" name="name" required>
+                <label for="message">¿Con que podemos ayudarte?</label>
+                <textarea class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full" id="message"
+                    name="message" rows="4" style="resize: none;"></textarea>
             </div>
             <div class="form-group col-span-2">
-                <label for="media">Where do you work?</label>
-                <input type="text" class="form-control" id="media" name="media">
+                <label for="attachment">Archivos</label>
+                <input type="file" class="form-control-file border-2 border-customColor-principal p-2 w-full"
+                    id="attachment" name="attachment">
             </div>
-            <div class="form-group col-span-1">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="form-group col-span-1">
-                <label for="phone">Phone</label>
-                <input type="tel" class="form-control" id="phone" name="phone">
-            </div>
-            <div class="form-group col-span-2">
-                <label for="message">How can we help you? Leave us your message and feel free to attach PDFs</label>
-                <textarea class="form-control" id="message" name="message" rows="4"></textarea>
-            </div>
-            <div class="form-group col-span-1">
-                <label for="attachment">Attach File</label>
-                <input type="file" class="form-control-file" id="attachment" name="attachment">
-            </div>
-            <div class="form-group col-span-1">
-                <label for="privacy_policy">Privacy Policy</label>
+            <div class="form-group col-span-2 grid grid-cols-2">
+                <label for="privacy_policy" class="mb-2">Privacy Policy</label>
                 <input type="checkbox" class="form-check-input" id="privacy_policy" name="privacy_policy" required>
                 <label class="form-check-label" for="privacy_policy">I have read and accept the privacy policy and
                     terms and conditions</label>
             </div>
+
             <div class="form-group col-span-2 flex justify-between items-end">
-                <button type="submit" class="btn btn-primary">Send Message</button>
-                <button type="submit" class="btn btn-secondary">Attach PDF</button>
+                <button type="submit"
+                    class="btn btn-primary border border-customColor-principal bg-customColor-principal pt-3 pb-3 pr-2 pl-2 font-bold text-md">ENVIAR</button>
+
             </div>
         </form>
+    </div>
 
+    <div id="form2"class="contact-form" style="display: none">
+        <h1 class="contact-form_title">sergi</h1>
+        <h5 class="contact-form_subtitle">
+            Si las personas y la naturaleza se ven afectadas, tenemos algo que decir. Puedes contactar con nosotros para
+            ampliar información sobre los temas ambientales que preocupan a la sociedad. Nuestro equipo está disponible
+            para comentarios, entrevistas e información. Si lo que quieres es utilizar alguna de nuestras fotografías o
+            publicaciones, cuéntanos qué necesitas y para qué lo quieres usar. Envíanos tu consulta rellenando este
+            formulario y nos pondremos en contacto contigo con la mayor brevedad posible. Si no puedes esperar, por
+            favor, llámanos al teléfono (+34) 91 354 0578 en horario de lunes a jueves de 8 a 17.30h y los viernes de 8
+            a 14h.
+        </h5>
+
+        <form action="{{ route('contacto.store') }}" method="post" enctype="multipart/form-data"
+            class="p-11 grid grid-cols-2 gap-4">
+            @csrf
+            <div class="form-group col-span-1">
+                <label for="name">¿Quien eres?</label>
+                <input type="text"
+                    class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full"
+                    id="name" name="name" required>
+            </div>
+            <div class="form-group col-span-1">
+                <label for="media">¿En que medio trabajas?</label>
+                <input type="text" class=" border-2 border-customColor-principal bg-transparent p-2 w-full"
+                    id="media" name="media">
+            </div>
+            <div class="form-group col-span-1">
+                <label for="email">Correo electronico</label>
+                <input type="email"
+                    class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full"
+                    id="email" name="email" required>
+            </div>
+            <div class="form-group col-span-1">
+                <label for="phone">Telefono</label>
+                <input type="tel"
+                    class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full"
+                    id="phone" name="phone">
+            </div>
+            <div class="form-group col-span-2">
+                <label for="message">¿Con que podemos ayudarte?</label>
+                <textarea class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full" id="message"
+                    name="message" rows="4" style="resize: none;"></textarea>
+            </div>
+            <div class="form-group col-span-2">
+                <label for="attachment">Archivos</label>
+                <input type="file" class="form-control-file border-2 border-customColor-principal p-2 w-full"
+                    id="attachment" name="attachment">
+            </div>
+            <div class="form-group col-span-2 grid grid-cols-2">
+                <label for="privacy_policy" class="mb-2">Privacy Policy</label>
+                <input type="checkbox" class="form-check-input" id="privacy_policy" name="privacy_policy" required>
+                <label class="form-check-label" for="privacy_policy">I have read and accept the privacy policy and
+                    terms and conditions</label>
+            </div>
+
+            <div class="form-group col-span-2 flex justify-between items-end">
+                <button type="submit"
+                    class="btn btn-primary border border-customColor-principal bg-customColor-principal pt-3 pb-3 pr-2 pl-2 font-bold text-md">ENVIAR</button>
+
+            </div>
+        </form>
+    </div>
+    <div id="form3"class="contact-form" style="display: none">
+        <h1 class="contact-form_title">Formulario 4</h1>
+        <h5 class="contact-form_subtitle">
+            Si las personas y la naturaleza se ven afectadas, tenemos algo que decir. Puedes contactar con nosotros para
+            ampliar información sobre los temas ambientales que preocupan a la sociedad. Nuestro equipo está disponible
+            para comentarios, entrevistas e información. Si lo que quieres es utilizar alguna de nuestras fotografías o
+            publicaciones, cuéntanos qué necesitas y para qué lo quieres usar. Envíanos tu consulta rellenando este
+            formulario y nos pondremos en contacto contigo con la mayor brevedad posible. Si no puedes esperar, por
+            favor, llámanos al teléfono (+34) 91 354 0578 en horario de lunes a jueves de 8 a 17.30h y los viernes de 8
+            a 14h.
+        </h5>
+
+        <form action="{{ route('contacto.store') }}" method="post" enctype="multipart/form-data"
+            class="p-11 grid grid-cols-2 gap-4">
+            @csrf
+            <div class="form-group col-span-1">
+                <label for="name">¿Quien eres?</label>
+                <input type="text"
+                    class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full"
+                    id="name" name="name" required>
+            </div>
+            <div class="form-group col-span-1">
+                <label for="media">¿En que medio trabajas?</label>
+                <input type="text" class=" border-2 border-customColor-principal bg-transparent p-2 w-full"
+                    id="media" name="media">
+            </div>
+            <div class="form-group col-span-1">
+                <label for="email">Correo electronico</label>
+                <input type="email"
+                    class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full"
+                    id="email" name="email" required>
+            </div>
+            <div class="form-group col-span-1">
+                <label for="phone">Telefono</label>
+                <input type="tel"
+                    class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full"
+                    id="phone" name="phone">
+            </div>
+            <div class="form-group col-span-2">
+                <label for="message">¿Con que podemos ayudarte?</label>
+                <textarea class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full" id="message"
+                    name="message" rows="4" style="resize: none;"></textarea>
+            </div>
+            <div class="form-group col-span-2">
+                <label for="attachment">Archivos</label>
+                <input type="file" class="form-control-file border-2 border-customColor-principal p-2 w-full"
+                    id="attachment" name="attachment">
+            </div>
+            <div class="form-group col-span-2 grid grid-cols-2">
+                <label for="privacy_policy" class="mb-2">Privacy Policy</label>
+                <input type="checkbox" class="form-check-input" id="privacy_policy" name="privacy_policy" required>
+                <label class="form-check-label" for="privacy_policy">I have read and accept the privacy policy and
+                    terms and conditions</label>
+            </div>
+
+            <div class="form-group col-span-2 flex justify-between items-end">
+                <button type="submit"
+                    class="btn btn-primary border border-customColor-principal bg-customColor-principal pt-3 pb-3 pr-2 pl-2 font-bold text-md">ENVIAR</button>
+
+            </div>
+        </form>
+    </div>
+
+    <div id="form4"class="contact-form" style="display: none">
+        <h1 class="contact-form_title">Formulario 2</h1>
+        <h5 class="contact-form_subtitle">
+            Si las personas y la naturaleza se ven afectadas, tenemos algo que decir. Puedes contactar con nosotros para
+            ampliar información sobre los temas ambientales que preocupan a la sociedad. Nuestro equipo está disponible
+            para comentarios, entrevistas e información. Si lo que quieres es utilizar alguna de nuestras fotografías o
+            publicaciones, cuéntanos qué necesitas y para qué lo quieres usar. Envíanos tu consulta rellenando este
+            formulario y nos pondremos en contacto contigo con la mayor brevedad posible. Si no puedes esperar, por
+            favor, llámanos al teléfono (+34) 91 354 0578 en horario de lunes a jueves de 8 a 17.30h y los viernes de 8
+            a 14h.
+        </h5>
+
+        <form action="{{ route('contacto.store') }}" method="post" enctype="multipart/form-data"
+            class="p-11 grid grid-cols-2 gap-4">
+            @csrf
+            <div class="form-group col-span-1">
+                <label for="name">¿Quien eres?</label>
+                <input type="text"
+                    class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full"
+                    id="name" name="name" required>
+            </div>
+            <div class="form-group col-span-1">
+                <label for="media">¿En que medio trabajas?</label>
+                <input type="text" class=" border-2 border-customColor-principal bg-transparent p-2 w-full"
+                    id="media" name="media">
+            </div>
+            <div class="form-group col-span-1">
+                <label for="email">Correo electronico</label>
+                <input type="email"
+                    class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full"
+                    id="email" name="email" required>
+            </div>
+            <div class="form-group col-span-1">
+                <label for="phone">Telefono</label>
+                <input type="tel"
+                    class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full"
+                    id="phone" name="phone">
+            </div>
+            <div class="form-group col-span-2">
+                <label for="message">¿Con que podemos ayudarte?</label>
+                <textarea class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full" id="message"
+                    name="message" rows="4" style="resize: none;"></textarea>
+            </div>
+            <div class="form-group col-span-2">
+                <label for="attachment">Archivos</label>
+                <input type="file" class="form-control-file border-2 border-customColor-principal p-2 w-full"
+                    id="attachment" name="attachment">
+            </div>
+            <div class="form-group col-span-2 grid grid-cols-2">
+                <label for="privacy_policy" class="mb-2">Privacy Policy</label>
+                <input type="checkbox" class="form-check-input" id="privacy_policy" name="privacy_policy" required>
+                <label class="form-check-label" for="privacy_policy">I have read and accept the privacy policy and
+                    terms and conditions</label>
+            </div>
+
+            <div class="form-group col-span-2 flex justify-between items-end">
+                <button type="submit"
+                    class="btn btn-primary border border-customColor-principal bg-customColor-principal pt-3 pb-3 pr-2 pl-2 font-bold text-md">ENVIAR</button>
+
+            </div>
+        </form>
+    </div>
+
+    <div id="form5"class="contact-form" style="display: none">
+        <h1 class="contact-form_title">SOY PERIODISTA</h1>
+        <h5 class="contact-form_subtitle">
+            Si las personas y la naturaleza se ven afectadas, tenemos algo que decir. Puedes contactar con nosotros para
+            ampliar información sobre los temas ambientales que preocupan a la sociedad. Nuestro equipo está disponible
+            para comentarios, entrevistas e información. Si lo que quieres es utilizar alguna de nuestras fotografías o
+            publicaciones, cuéntanos qué necesitas y para qué lo quieres usar. Envíanos tu consulta rellenando este
+            formulario y nos pondremos en contacto contigo con la mayor brevedad posible. Si no puedes esperar, por
+            favor, llámanos al teléfono (+34) 91 354 0578 en horario de lunes a jueves de 8 a 17.30h y los viernes de 8
+            a 14h.
+        </h5>
+
+        <form action="{{ route('contacto.store') }}" method="post" enctype="multipart/form-data"
+            class="p-11 grid grid-cols-2 gap-4">
+            @csrf
+            <div class="form-group col-span-1">
+                <label for="name">¿Quien eres?</label>
+                <input type="text"
+                    class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full"
+                    id="name" name="name" required>
+            </div>
+            <div class="form-group col-span-1">
+                <label for="media">¿En que medio trabajas?</label>
+                <input type="text" class=" border-2 border-customColor-principal bg-transparent p-2 w-full"
+                    id="media" name="media">
+            </div>
+            <div class="form-group col-span-1">
+                <label for="email">Correo electronico</label>
+                <input type="email"
+                    class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full"
+                    id="email" name="email" required>
+            </div>
+            <div class="form-group col-span-1">
+                <label for="phone">Telefono</label>
+                <input type="tel"
+                    class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full"
+                    id="phone" name="phone">
+            </div>
+            <div class="form-group col-span-2">
+                <label for="message">¿Con que podemos ayudarte?</label>
+                <textarea class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full" id="message"
+                    name="message" rows="4" style="resize: none;"></textarea>
+            </div>
+            <div class="form-group col-span-2">
+                <label for="attachment">Archivos</label>
+                <input type="file" class="form-control-file border-2 border-customColor-principal p-2 w-full"
+                    id="attachment" name="attachment">
+            </div>
+            <div class="form-group col-span-2 grid grid-cols-2">
+                <label for="privacy_policy" class="mb-2">Privacy Policy</label>
+                <input type="checkbox" class="form-check-input" id="privacy_policy" name="privacy_policy" required>
+                <label class="form-check-label" for="privacy_policy">I have read and accept the privacy policy and
+                    terms and conditions</label>
+            </div>
+
+            <div class="form-group col-span-2 flex justify-between items-end">
+                <button type="submit"
+                    class="btn btn-primary border border-customColor-principal bg-customColor-principal pt-3 pb-3 pr-2 pl-2 font-bold text-md">ENVIAR</button>
+
+            </div>
+        </form>
     </div>
 </div>
 
@@ -126,7 +388,7 @@
 
     .carousel-container {
         width: 90%;
-        height: 90vh;
+        height: 60vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -315,6 +577,29 @@
                 slides[i].style.display = "none";
             }
         }
+        const attentionTitle = document.getElementById('attentionTitle');
+
+        // Cambiamos el contenido del título según el índice actual del carrusel
+        switch (currentIndex) {
+            case 0:
+                attentionTitle.textContent = "ATENCION AL CLIENTE";
+                break;
+            case 1:
+                attentionTitle.textContent = "SOY PERIODISTA";
+                break;
+            case 2:
+                attentionTitle.textContent = "OTRO TÍTULO 2";
+                break;
+            case 3:
+                attentionTitle.textContent = "QUIERO SER VOLUNTARIO";
+                break;
+            case 4:
+                attentionTitle.textContent = "OTRAS CONSULTAS";
+                break;
+            default:
+                attentionTitle.textContent = "DEFAULT TÍTULO";
+                break;
+        }
         document.querySelectorAll('.cards input[type="radio"]').forEach(radio => {
             radio.checked = false;
         });
@@ -324,6 +609,28 @@
     function selectCard(index) {
         currentIndex = index;
         updateSlide();
+        updateForm(index); // Agrega esta línea para actualizar el formulario al cambiar el carrusel
+
+    }
+
+    function updateForm(index) {
+        // Oculta todos los formularios
+        document.querySelectorAll('.contact-form').forEach(form => {
+            form.style.display = 'none';
+        });
+
+        // Muestra el formulario correspondiente al índice seleccionado
+        const formId = `form${index + 1}`;
+        const selectedForm = document.getElementById(formId);
+        if (selectedForm) {
+            selectedForm.style.display = 'block';
+        }
+    }
+
+    // Ejemplo de cómo podrías llamar a esta función cuando cambie el carrusel
+    function onSelectSlide(index) {
+        // Llama a la función para actualizar el formulario según el índice del carrusel
+        updateForm(index);
     }
 
     updateSlide();
