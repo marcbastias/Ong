@@ -301,15 +301,7 @@ return [
             'icon' => 'fas fa-user', // Icono para el enlace al perfil
             'can' => 'profile.show', // Verificar si el usuario tiene permiso para ver su perfil
         ],
-        [
-            'type'         => 'navbar-search',
-            'text'         => 'search',
-            'topnav_right' => true,
-        ],
-        [
-            'type'         => 'fullscreen-widget',
-            'topnav_right' => true,
-        ],
+
 
         // Sidebar items:
         [
@@ -379,53 +371,11 @@ return [
         ['header' => 'GESTION DE ADMINISTRADOR'],
 
         [
-            'text'       => 'Mensajes de formularios',
-            'route'        => 'admin.messages.index',
-            'icon'        => 'fas fa-fw fa-envelope',
-            'can'         => 'admin.messages.index'
+            'text'  => 'Crear noticias',
+            'route' => 'admin.messages.index',
+            'icon'  => 'fas fa-newspaper',
         ],
-        [
-            'text'       => 'Post list',
-            'route'        => 'admin.posts.index',
-            'icon'        => 'fas fa-fw fa-clipboard',
-            'can'         => 'admin.posts.index'
-        ],
-        [
-            'text'       => 'Post list',
-            'route'        => 'admin.posts.index',
-            'icon'        => 'fas fa-fw fa-clipboard',
-            'can'         => 'admin.posts.index'
-        ],
-        [
-            'text'       => 'Post list',
-            'route'        => 'admin.posts.index',
-            'icon'        => 'fas fa-fw fa-clipboard',
-            'can'         => 'admin.posts.index'
-        ],
-        [
-            'text'       => 'Post list',
-            'route'        => 'admin.posts.index',
-            'icon'        => 'fas fa-fw fa-clipboard',
-            'can'         => 'admin.posts.index'
-        ],
-        [
-            'text'       => 'Post list',
-            'route'        => 'admin.posts.index',
-            'icon'        => 'fas fa-fw fa-clipboard',
-            'can'         => 'admin.posts.index'
-        ],
-        [
-            'text'       => 'Post list',
-            'route'        => 'admin.posts.index',
-            'icon'        => 'fas fa-fw fa-clipboard',
-            'can'         => 'admin.posts.index'
-        ],
-        [
-            'text'       => 'Post list',
-            'route'        => 'admin.posts.index',
-            'icon'        => 'fas fa-fw fa-clipboard',
-            'can'         => 'admin.posts.index'
-        ],
+
 
     ],
 

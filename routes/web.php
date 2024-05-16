@@ -17,6 +17,8 @@ Route::get('/auth/{provider}/callback', [SocialController::class, 'callback']);
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::view('/somos', 'front-client.somos');
 Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto.index');
+Route::post('/contacto', [ContactoController::class, 'store'])->name('contacto.store');
+
 
 
 // Rutas para la sección de Privacidad
