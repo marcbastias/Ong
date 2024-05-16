@@ -44,7 +44,7 @@
         </button>
     </div>
 
-    <div id="attentionTitle" class="bg-black rounded-4xl text-2xl text-white pt-3 pb-3 pr-3 pl-3 mb-24"
+    <div id="attentionTitle" class="bg-gray-800 rounded-4xl text-2xl text-white pt-3 pb-3 pr-12 pl-12 mb-24"
         style="border-radius: 25px;">
         ATENCION AL CLIENTE</div>
     <div id="form1"class="contact-form">
