@@ -371,7 +371,7 @@ return [
         ['header' => 'GESTION DE ADMINISTRADOR'],
 
         [
-            'text'  => 'Crear noticias',
+            'text'  => 'Mensajes de formulario',
             'route' => 'admin.messages.index',
             'icon'  => 'fas fa-newspaper',
         ],
