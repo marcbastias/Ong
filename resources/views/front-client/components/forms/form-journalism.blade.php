@@ -9,7 +9,7 @@
         a 14h.
     </h5>
 
-    <form action="{{ route('contacto.store') }}" method="post" enctype="multipart/form-data"
+    <form action="{{ route('contacto.journalism') }}" method="post" enctype="multipart/form-data"
         class="p-11 grid grid-cols-2 gap-4">
         @csrf
         <div class="form-group col-span-1">

@@ -15,9 +15,19 @@ Route::get('/auth/{provider}/callback', [SocialController::class, 'callback']);
 
 // Rutas para páginas estáticas
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+
 Route::view('/somos', 'front-client.somos');
+
+
+
 Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto.index');
-Route::post('/contacto', [ContactoController::class, 'store'])->name('contacto.store');
+Route::post('/contacto/journalism', [ContactoController::class, 'journalism'])->name('contacto.journalism');
+Route::post('/contacto/attention', [ContactoController::class, 'attention'])->name('contacto.attention');
+Route::post('/contacto/help', [ContactoController::class, 'help'])->name('contacto.help');
+Route::post('/contacto/other-queries', [ContactoController::class, 'otherQueries'])->name('contacto.otherQueries');
+Route::post('/contacto/work', [ContactoController::class, 'work'])->name('contacto.work');
+
 
 
 

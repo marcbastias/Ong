@@ -19,20 +19,22 @@
         <input type="radio" name="slider" id="item-5">
 
         <div class="carousel-container cards">
+
             <label class="card" for="item-1" id="circle-1" onclick="selectCard(0)">
-                <img src="../assets/images/carrusel-img/animal1.png" alt="circle">
+                <img src="{{ asset('assets/images/carrusel-img/danger.jpeg') }}" alt="circle">
             </label>
+
             <label class="card" for="item-2" id="circle-2" onclick="selectCard(1)">
-                <img src="../assets/images/carrusel-img/animal2.png" alt="circle">
+                <img src="../assets/images/carrusel-img/work-animal.jpg" alt="circle">
             </label>
             <label class="card" for="item-3" id="circle-3" onclick="selectCard(2)">
-                <img src="../assets/images/carrusel-img/animal3.png" alt="circle">
+                <img src="../assets/images/carrusel-img/attention.jpg" alt="circle">
             </label>
             <label class="card" for="item-4" id="circle-4" onclick="selectCard(3)">
-                <img src="../assets/images/carrusel-img/animal4.png" alt="circle">
+                <img src="../assets/images/carrusel-img/journalist.jpg" alt="circle">
             </label>
             <label class="card" for="item-5" id="circle-5" onclick="selectCard(4)">
-                <img src="../assets/images/carrusel-img/animal5.png" alt="circle">
+                <img src="../assets/images/carrusel-img/animal4.png" alt="circle">
             </label>
         </div>
 
@@ -116,6 +118,13 @@
         transition: transform .4s ease;
         cursor: pointer;
     }
+    .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Esto hace que la imagen sea redonda */
+    object-fit: cover;
+}
+
 
     .container {
         width: 95%;
