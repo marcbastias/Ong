@@ -383,16 +383,18 @@ return [
         [
             'text'  => 'Solicitudes de ayuda',
             'route' => 'admin.forms.help',
-            'icon'  => 'fas fa-user-tie', // Cambia el icono a uno relacionado con trabajo o currículum
+            'icon'  => 'fas fa-paw', // Cambia el icono a uno relacionado con trabajo o currículum
         ],
         [
             'text'  => 'Otras consultas',
             'route' => 'admin.forms.otherQuery',
-            'icon'  => 'fas fa-user-tie', // Cambia el icono a uno relacionado con trabajo o currículum
+            'icon'  => 'fas fa-question-circle', // Cambia el icono a uno relacionado con trabajo o currículum
         ],
 
-
+        ['header' => 'PLANTILLAS'],
     ],
+
+    
 
     /*
     |--------------------------------------------------------------------------
