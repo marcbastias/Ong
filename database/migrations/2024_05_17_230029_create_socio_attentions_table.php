@@ -3,7 +3,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSocioAttentionTable extends Migration
+class CreateSocioAttentionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,10 @@ class CreateSocioAttentionTable extends Migration
      */
     public function up()
     {
-        Schema::create('socio_attention', function (Blueprint $table) {
+        Schema::create('socio_attentions', function (Blueprint $table) {
             $table->id();
             $table->string('first_name');
-            $table->string('last_name1');
+            $table->string('last_name');
             $table->string('phone')->nullable();
             $table->string('email');
             $table->string('member_number')->nullable();
@@ -32,6 +32,6 @@ class CreateSocioAttentionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('socio_attention');
+        Schema::dropIfExists('socio_attentions');
     }
 }

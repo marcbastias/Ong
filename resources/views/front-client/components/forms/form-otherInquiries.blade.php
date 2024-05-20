@@ -11,11 +11,11 @@
     </div>
     <div class="form-group col-span-1">
         <label for="last_name">Primer apellido</label>
-        <input type="text" class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full" id="last_name1" name="last_name1">
+        <input type="text" class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full" id="last_name" name="last_name">
     </div>
     <div class="form-group col-span-1">
         <label for="relation">¿Tienes alguna relación con WWF?</label>
-        <input type="text" class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full" id="relation_wwf" name="relation_wwf">
+        <input type="text" class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full" id="relation" name="relation">
     </div>
     <div class="form-group col-span-1">
         <label for="email">Email*(required)</label>

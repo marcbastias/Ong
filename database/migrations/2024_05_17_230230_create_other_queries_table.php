@@ -15,8 +15,8 @@ class CreateOtherQueriesTable extends Migration
         Schema::create('other_queries', function (Blueprint $table) {
             $table->id();
             $table->string('first_name');
-            $table->string('last_name1')->nullable();
-            $table->string('relation_wwf')->nullable();
+            $table->string('last_name')->nullable();
+            $table->string('relation')->nullable();
             $table->string('email');
             $table->string('phone')->nullable();
             $table->text('message');

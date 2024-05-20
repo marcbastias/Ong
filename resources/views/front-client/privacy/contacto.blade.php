@@ -308,11 +308,11 @@
     }
 
     function selectCard(index) {
-        currentIndex = index;
-        updateSlide();
-        updateForm(index); // Agrega esta línea para actualizar el formulario al cambiar el carrusel
+    currentIndex = index;
+    updateSlide();
+    updateForm(index); // Agrega esta línea para actualizar el formulario al cambiar el carrusel
+}
 
-    }
 
     function updateForm(index) {
         // Oculta todos los formularios

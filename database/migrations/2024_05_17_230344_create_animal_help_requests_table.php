@@ -21,7 +21,7 @@ class CreateAnimalHelpRequestsTable extends Migration
             $table->string('location');
             $table->text('description');
             $table->enum('urgency', ['low', 'medium', 'high']);
-            $table->string('photo_path')->nullable();
+            $table->binary('photo_content')->nullable(); // Nuevo campo para el contenido de la imagen
             $table->boolean('privacy_policy')->default(false);
             $table->timestamps();
         });

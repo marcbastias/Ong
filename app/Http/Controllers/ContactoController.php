@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Form;
-use App\Models\Forms\AnimalHelpRequest;
-use App\Models\Forms\JobApplication;
-use App\Models\Forms\SocioAttention;
-use App\Models\Forms\OtherQuery;
+use App\Models\AnimalHelpRequest;
+use App\Models\JobApplication;
+use App\Models\SocioAttention;
+use App\Models\OtherQuery;
+
 
 class ContactoController extends Controller
 {
@@ -47,7 +48,6 @@ class ContactoController extends Controller
             'phone' => 'required|string',
             'position' => 'required|string',
             'message' => 'required|string',
-            'cv_path' => 'required|file|mimes:pdf,doc,docx|max:2048',
             'privacy_policy' => 'required|accepted',
         ]);
 
@@ -59,13 +59,12 @@ class ContactoController extends Controller
         $jobApplication->message = $request->input('message');
         $jobApplication->privacy_policy = true;
 
-        // Guardar el archivo adjunto
-        if ($request->hasFile('cv_path')) {
-            $cv = $request->file('cv_path');
-            $cvName = time() . '_' . $cv->getClientOriginalName();
-            $cv->storeAs('cvs', $cvName);
-            $jobApplication->cv = $cvName;
-        }
+       // Guardar el archivo adjunto
+       if ($request->hasFile('cv_path')) {
+        $cv = $request->file('cv_path');
+        $cvContent = file_get_contents($cv->getRealPath());
+        $jobApplication->cv_file = $cvContent;
+    }
 
         $jobApplication->save();
 
@@ -82,31 +81,33 @@ class ContactoController extends Controller
             'location' => 'required|string',
             'description' => 'required|string',
             'urgency' => 'required|string',
+            'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif', // Validación de la foto
             'privacy_policy' => 'required|accepted',
         ]);
-
+    
         $form = new AnimalHelpRequest();
         $form->name = $request->input('name');
         $form->email = $request->input('email');
         $form->phone = $request->input('phone');
-        $form->animal_type = $request->input('animal-type');
+        $form->animal_type = $request->input('animal_type');
         $form->location = $request->input('location');
         $form->description = $request->input('description');
         $form->urgency = $request->input('urgency');
         $form->privacy_policy = true;
-
+    
         // Guardar la foto adjunta
         if ($request->hasFile('photo')) {
             $photo = $request->file('photo');
-            $photoName = time() . '_' . $photo->getClientOriginalName();
-            $photo->storeAs('photos', $photoName);
-            $form->photo = $photoName;
+            $photoContent = file_get_contents($photo->getRealPath());
+            $form->photo_content = $photoContent; // Guardar el contenido de la imagen en la base de datos
         }
-
+    
         $form->save();
-
+    
         return redirect()->route('contact.success');
     }
+    
+    
 
     public function attention(Request $request)
     {
@@ -120,22 +121,23 @@ class ContactoController extends Controller
             'privacy_policy' => 'required|accepted',
         ]);
 
-        $form = new SocioAttention();
-        $form->name = $request->input('first_name') . ' ' . $request->input('last_name');
-        $form->email = $request->input('email');
-        $form->phone = $request->input('phone');
-        $form->member_number = $request->input('member_number');
-        $form->message = $request->input('message');
-        $form->privacy_policy = true;
+        $socioAttention = new SocioAttention();
+        $socioAttention->first_name = $request->input('first_name');
+        $socioAttention->last_name = $request->input('last_name');
+        $socioAttention->email = $request->input('email');
+        $socioAttention->phone = $request->input('phone');
+        $socioAttention->member_number = $request->input('member_number');
+        $socioAttention->message = $request->input('message');
+        $socioAttention->privacy_policy = true;
 
-        $form->save();
+        $socioAttention->save();
 
         return redirect()->route('contact.success');
     }
 
     public function otherQueries(Request $request)
     {
-        $request->validate([
+       $request->validate([
             'first_name' => 'required|string',
             'last_name' => 'nullable|string',
             'relation' => 'nullable|string',
@@ -146,7 +148,7 @@ class ContactoController extends Controller
         ]);
 
         $form = new OtherQuery();
-        $form->name = $request->input('first_name');
+        $form->first_name = $request->input('first_name');
         $form->last_name = $request->input('last_name');
         $form->relation = $request->input('relation_wwf');
         $form->email = $request->input('email');

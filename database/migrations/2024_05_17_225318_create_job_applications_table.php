@@ -19,7 +19,7 @@ class CreateJobApplicationsTable extends Migration
             $table->string('phone');
             $table->string('position');
             $table->text('message');
-            $table->string('cv_path');
+            $table->binary('cv_file')->nullable();
             $table->boolean('privacy_policy')->default(false);
             $table->timestamps();
         });

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Models\Forms;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class SocioAttention extends Model
+class OtherQuery extends Model
 {
     use HasFactory;
 }

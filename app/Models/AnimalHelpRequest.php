@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Models\Forms;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class OtherQuery extends Model
+class AnimalHelpRequest extends Model
 {
     use HasFactory;
+    
 }

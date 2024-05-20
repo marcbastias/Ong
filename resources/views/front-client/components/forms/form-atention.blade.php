@@ -11,7 +11,7 @@
     </div>
     <div class="form-group col-span-1">
         <label for="last_name">Apellidos*(required)</label>
-        <input type="text" class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full" id="last_name1" name="last_name1" required>
+        <input type="text" class="form-control border-2 border-customColor-principal bg-transparent p-2 w-full" id="last_name" name="last_name" required>
     </div>
     <div class="form-group col-span-1">
         <label for="phone">Teléfono</label>
