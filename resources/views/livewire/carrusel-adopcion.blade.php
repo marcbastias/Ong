@@ -220,7 +220,7 @@
 
             <!-- Flecha derecha -->
 
-            <div class="slide absolute flex">
+            <div class="slide flex">
                 <div class="slide-item">
                     <img src="../assets/images/carrusel-img/1.png" alt="">
                     <div class="overlay">
