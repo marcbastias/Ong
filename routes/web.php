@@ -8,10 +8,6 @@ use App\Http\Controllers\SocialController;
 use App\Http\Controllers\PrivacidadController;
 use App\Http\Controllers\InformateController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\SuscribeteNews;
-use App\Http\Controllers\SubscriptionController;
-
 
 // Rutas para autenticación social
 Route::get('/auth/{provider}/redirect', [SocialController::class, 'redirect']);
@@ -19,10 +15,17 @@ Route::get('/auth/{provider}/callback', [SocialController::class, 'callback']);
 
 // Rutas para páginas estáticas
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::view('/somos', 'front-client.somos');
-Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto.index');
-Route::post('/contacto', [ContactoController::class, 'store'])->name('contacto.store');
 
+
+Route::view('/somos', 'front-client.somos');
+
+
+Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto.index');
+Route::post('/contacto/journalism', [ContactoController::class, 'journalism'])->name('contacto.journalism');
+Route::post('/contacto/attention', [ContactoController::class, 'attention'])->name('contacto.attention');
+Route::post('/contacto/help', [ContactoController::class, 'help'])->name('contacto.help');
+Route::post('/contacto/other-queries', [ContactoController::class, 'otherQueries'])->name('contacto.otherQueries');
+Route::post('/contacto/work', [ContactoController::class, 'work'])->name('contacto.work');
 
 
 // Rutas para la sección de Privacidad
@@ -65,6 +68,12 @@ Route::middleware([
 ])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
+
+// Ruta para el inicio de sesión del administrador
+Route::get('/nakjsnfoakjsd', [AdminController::class, 'showLoginForm'])->name('auth.login');
+
 
 //mails
 Route::post('suscribirse', function () {

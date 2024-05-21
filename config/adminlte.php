@@ -343,17 +343,12 @@ return [
         ['header' => 'BLOG OPTIONS'],
 
         [
-            'text'       => 'Post list',
+            'text'       => 'Posts',
             'route'        => 'admin.posts.index',
             'icon'        => 'fas fa-fw fa-clipboard',
             'can'         => 'admin.posts.index'
         ],
-        [
-            'text'       => 'Create new post',
-            'route'        => 'admin.posts.create',
-            'icon'        => 'fas fa-fw fa-file',
-            'can'         => 'admin.posts.create'
-        ], [
+     [
             'text' => 'Categories',
             'route'  => 'admin.categories.index',
             'icon' => 'fab fa-fw fa-buffer',
@@ -368,16 +363,44 @@ return [
             'can'         => 'admin.tags.index'
         ],
 
-        ['header' => 'GESTION DE ADMINISTRADOR'],
+        ['header' => 'GESTION DE FORMULARIOS'],
 
         [
-            'text'  => 'Crear noticias',
-            'route' => 'admin.messages.index',
+            'text'  => 'Mensajes de formulario',
+            'route' => 'admin.forms.index',
             'icon'  => 'fas fa-newspaper',
         ],
+        [
+            'text'  => 'Solicitudes de trabajo',
+            'route' => 'admin.forms.job',
+            'icon'  => 'fas fa-user-tie', // Cambia el icono a uno relacionado con trabajo o currículum
+        ],
+        [
+            'text'  => 'Atencion al socio',
+            'route' => 'admin.forms.socio',
+            'icon'  => 'fas fa-handshake', // Cambia el icono a uno relacionado con trabajo o currículum
+        ],
+        [
+            'text'  => 'Solicitudes de ayuda',
+            'route' => 'admin.forms.help',
+            'icon'  => 'fas fa-paw', // Cambia el icono a uno relacionado con trabajo o currículum
+        ],
+        [
+            'text'  => 'Otras consultas',
+            'route' => 'admin.forms.otherQuery',
+            'icon'  => 'fas fa-question-circle', // Cambia el icono a uno relacionado con trabajo o currículum
+        ],
+        [
+            'text' => 'Posts',
+            'route' => 'admin.posts.index',
+            'icon' => 'fas fa-fw fa-clipboard',
+            'can' => 'admin.posts.index'
+        ],
 
-
+        ['header' => 'PLANTILLAS'],
     ],
+
+    
 
     /*
     |--------------------------------------------------------------------------

@@ -25,4 +25,14 @@ Route::resource('tags', TagController::class)->except('show')->names('admin.tags
 
 Route::resource('posts', PostController::class)->except('show')->names('admin.posts');
 
-Route::get('/admin/messages', [FormMessagesController::class, 'index'])->name('admin.messages.index');
+Route::get('/forms', [FormMessagesController::class, 'index'])->name('admin.forms.index');
+
+Route::get('/forms/job', [FormMessagesController::class, 'job'])->name('admin.forms.job');  
+
+Route::get('/forms/attention', [FormMessagesController::class, 'attention'])->name('admin.forms.socio');  
+
+Route::get('/forms/help', [FormMessagesController::class, 'help'])->name('admin.forms.help');  
+
+Route::get('/forms/otherQuery', [FormMessagesController::class, 'otherQueries'])->name('admin.forms.otherQuery');  
+// Rutas relacionadas con el manejo de currículums
+Route::get('/download-cv/{id}', [FormMessagesController::class, 'downloadCV'])->name('download.cv');
