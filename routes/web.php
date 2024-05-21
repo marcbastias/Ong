@@ -8,6 +8,10 @@ use App\Http\Controllers\SocialController;
 use App\Http\Controllers\PrivacidadController;
 use App\Http\Controllers\InformateController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SuscribeteNews;
+use App\Http\Controllers\SubscriptionController;
+
 
 // Rutas para autenticación social
 Route::get('/auth/{provider}/redirect', [SocialController::class, 'redirect']);
@@ -61,3 +65,9 @@ Route::middleware([
 ])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+//mails
+Route::post('suscribirse', function () {
+    Mail::to('ongecos@ecos.com')->send(new SuscribeteNews);
+    return 'Correo enviado';
+})->name('suscribirse');
