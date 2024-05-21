@@ -8,6 +8,8 @@ use App\Http\Controllers\SocialController;
 use App\Http\Controllers\PrivacidadController;
 use App\Http\Controllers\InformateController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Mail\SuscribeteNews;
 
 // Rutas para autenticación social
 Route::get('/auth/{provider}/redirect', [SocialController::class, 'redirect']);
