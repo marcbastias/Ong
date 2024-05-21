@@ -390,12 +390,6 @@ return [
             'route' => 'admin.forms.otherQuery',
             'icon'  => 'fas fa-question-circle', // Cambia el icono a uno relacionado con trabajo o currículum
         ],
-        [
-            'text' => 'Posts',
-            'route' => 'admin.posts.index',
-            'icon' => 'fas fa-fw fa-clipboard',
-            'can' => 'admin.posts.index'
-        ],
 
         ['header' => 'PLANTILLAS'],
     ],

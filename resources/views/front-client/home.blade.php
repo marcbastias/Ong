@@ -58,7 +58,7 @@
     <section class="mt-36 p-6 rounded-lg">
         <div class="bg-[#8AB469] p-16 w-3/5 h-[800px] mx-auto">
             <h1 class="text-white text-3xl font-bold mb-16 text-center">SUSCRÍBETE A NUESTRO NEWSLETTER</h1>
-            <form action="{{ route('subscribe') }}" method="POST">
+            <form method="POST">
                 @csrf
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20 w-11/12 mx-auto text-[17px]">
                     <div>

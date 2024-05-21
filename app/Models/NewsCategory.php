@@ -2,14 +2,22 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class NewsCategory extends Model
 {
-    // Nombre de la tabla en la base de datos
-    protected $table = 'news_categories';
+    use HasFactory;
 
-    // Relación: Una categoría puede tener muchas noticias
+    protected $table = 'news_categories'; // Esta línea es opcional si el nombre de la tabla sigue la convención de Laravel
+
+    protected $fillable = ['name', 'description'];
+
+    public function getRouteKeyName(){
+        return 'slug';
+    }
+
+    // Relación 1:M
     public function news()
     {
         return $this->hasMany(News::class, 'category_id');

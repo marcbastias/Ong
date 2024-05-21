@@ -9,6 +9,9 @@ class News extends Model
     // Nombre de la tabla en la base de datos
     protected $table = 'news';
 
+    // Campos que se pueden asignar masivamente
+    protected $fillable = ['title', 'content', 'category_id', 'author_id', 'publish_date'];
+
     // Relación: Una noticia pertenece a una categoría
     public function category()
     {

@@ -10,6 +10,8 @@ use App\Http\Controllers\InformateController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Mail\SuscribeteNews;
+use Illuminate\Support\Facades\Mail;
+use App\Http\Controllers\NewsController;
 
 // Rutas para autenticación social
 Route::get('/auth/{provider}/redirect', [SocialController::class, 'redirect']);
@@ -70,8 +72,6 @@ Route::middleware([
 ])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
-
-
 
 // Ruta para el inicio de sesión del administrador
 Route::get('/nakjsnfoakjsd', [AdminController::class, 'showLoginForm'])->name('auth.login');
