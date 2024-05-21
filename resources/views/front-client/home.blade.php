@@ -93,7 +93,6 @@
         </div>
     </section>
 
-
     <section class="mt-32 shadow-lg p-8 h-[1000px]">
         <div class="flex items-center justify-center mb-6 mt-8">
             <hr class="flex-1 border-t-2 border-[#8AB469]">
