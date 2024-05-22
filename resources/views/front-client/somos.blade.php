@@ -77,6 +77,7 @@
             ÚNETE
         </button>
     </div>
+
     <div class="mt-2 p-16">
         <div class="flex items-center ">
             <hr style="flex: 1; border-color: #4CAF50;">

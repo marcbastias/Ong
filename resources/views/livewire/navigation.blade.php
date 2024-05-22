@@ -7,7 +7,7 @@
                 <li class="relative">
                     <a href="#" class="text-white hover:text-black" onclick="toggleDropdown(event, 'informate')">Informate</a>
                     <div id="informate" class="absolute bg-white p-4 rounded-md shadow-lg hidden border border-gray-300 z-10 transform origin-top transition-all duration-300 ease-in-out scale-y-0" data-visible="false" onclick="event.stopPropagation()">
-                        <a href="#" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Newsletter</a>
+                        <a href="/newsletter" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Newsletter</a>
                         <div class="border-t border-gray-300"></div>
                         <a href="#" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Blog</a>
                         <div class="border-t border-gray-300"></div>

@@ -9,7 +9,9 @@ use App\Http\Controllers\PrivacidadController;
 use App\Http\Controllers\InformateController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\EspeciesController;
 use App\Mail\SuscribeteNews;
+use Illuminate\Support\Facades\Mail;
 
 // Rutas para autenticación social
 Route::get('/auth/{provider}/redirect', [SocialController::class, 'redirect']);
@@ -39,7 +41,7 @@ Route::prefix('privacidad')->group(function () {
 
 // Rutas para la sección "Informate"
 Route::prefix('informate')->group(function () {
-    Route::get('/newsletter', [InformateController::class, 'index'])->name('informate.newsletter');
+    Route::get('/newsletter', [InformateController::class, 'index'])->name('front-client.informate.newsletter');
     Route::view('/blog', 'front-client.informate.blog');
     Route::view('/contacta', 'front-client.informate.contacta');
 });
@@ -60,6 +62,22 @@ Route::prefix('colabora')->group(function () {
     Route::get('/adopta', [ColaboraController::class, 'adopta'])->name('colabora.adopta');
     Route::get('/animalesAmenazados', [ColaboraController::class, 'animalesAmenazados'])->name('colabora.animalesAmenazados');
     Route::get('/animalesExplotados', [ColaboraController::class, 'animalesExplotados'])->name('colabora.animalesExplotados');
+});
+
+Route::prefix('trabajo/especies')->group(function () {
+    Route::get('/lobo', [EspeciesController::class, 'lobo_iberico'])->name('front-client.trabajo.animales.lobo');
+    Route::get('/lince', [EspeciesController::class, 'lince_iberico'])->name('front-client.trabajo.animales.lince');
+    Route::get('/vison', [EspeciesController::class, 'vison_europeo'])->name('front-client.trabajo.animales.vison');
+    Route::get('/rapaces', [EspeciesController::class, 'rapaces'])->name('front-client.trabajo.animales.rapaces');
+    Route::get('/conejo', [EspeciesController::class, 'conejo'])->name('front-client.trabajo.animales.conejo');
+    Route::get('/elefante', [EspeciesController::class, 'elefante'])->name('front-client.trabajo.animales.elefante');
+    Route::get('/oso', [EspeciesController::class, 'oso_polar'])->name('front-client.trabajo.animales.oso_');
+    Route::get('/ballena', [EspeciesController::class, 'ballena'])->name('front-client.trabajo.animales.ballena');
+    Route::get('/rinoceronte', [EspeciesController::class, 'rinoceronte'])->name('front-client.trabajo.animales.rinoceronte');
+    Route::get('/leopardo', [EspeciesController::class, 'leopardo_de_las_nieves'])->name('front-client.trabajo.animales.leopardo');
+    Route::get('/tortugas', [EspeciesController::class, 'tortugas'])->name('front-client.trabajo.animales.tortugas');
+    Route::get('/chimpance', [EspeciesController::class, 'chimpance'])->name('front-client.trabajo.animales.chimpance');
+
 });
 
 // Ruta de Dashboard
