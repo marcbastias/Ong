@@ -10,9 +10,8 @@ use App\Http\Controllers\InformateController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EspeciesController;
-use App\Mail\SuscribeteNews;
-use Illuminate\Support\Facades\Mail;
-use App\Http\Controllers\NewsController;
+use App\Http\Controllers\NewsletterController;
+
 
 // Rutas para autenticación social
 Route::get('/auth/{provider}/redirect', [SocialController::class, 'redirect']);
@@ -77,7 +76,6 @@ Route::prefix('trabajo/especies')->group(function () {
     Route::get('/leopardo', [EspeciesController::class, 'leopardo_de_las_nieves'])->name('front-client.trabajo.animales.leopardo');
     Route::get('/tortugas', [EspeciesController::class, 'tortugas'])->name('front-client.trabajo.animales.tortugas');
     Route::get('/chimpance', [EspeciesController::class, 'chimpance'])->name('front-client.trabajo.animales.chimpance');
-
 });
 
 // Ruta de Dashboard
@@ -93,8 +91,4 @@ Route::middleware([
 Route::get('/nakjsnfoakjsd', [AdminController::class, 'showLoginForm'])->name('auth.login');
 
 
-//mails
-Route::post('suscribirse', function () {
-    Mail::to('ongecos@ecos.com')->send(new SuscribeteNews);
-    return 'Correo enviado';
-})->name('suscribirse');
+Route::post('/subscribe', [NewsletterController::class, 'subscribe'])->name('subscribe');

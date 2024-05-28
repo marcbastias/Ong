@@ -1,4 +1,8 @@
-<nav style="background-color: #5C795A;">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+
+<nav style="background-color: #8AB469;">
     <div>
         <ul class="flex items-center justify-center gap-10">
             <div class="flex gap-10 text-xl font-mono">
@@ -11,7 +15,8 @@
                         <div class="border-t border-gray-300"></div>
                         <a href="/posts" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Blog</a>
                         <div class="border-t border-gray-300"></div>
-                        <a href="/contacto" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Contacta</a>
+                        <a href="/contacto"
+                            class="block text-gray-800 py-2 px-4 transition-colors duration-300">Contacta</a>
                     </div>
                 </li>
             </div>
