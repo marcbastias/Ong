@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 </head>
 
-<nav style="background-color: #5C795A;">
+<nav style="background-color: #8ab469;">
     <div>
         <ul class="flex items-center justify-center gap-10">
             <div class="flex gap-10 text-xl font-mono">
