@@ -42,8 +42,7 @@ Route::prefix('privacidad')->group(function () {
 
 // Rutas para la sección "Informate"
 Route::prefix('informate')->group(function () {
-    Route::get('/newsletter', [InformateController::class, 'index'])->name('front-client.informate.newsletter');
-    Route::view('/blog', 'front-client.informate.blog');
+    Route::view('/newsletter', 'front-client.informate.newsletter');
     Route::view('/contacta', 'front-client.informate.contacta');
 });
 

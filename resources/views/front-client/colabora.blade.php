@@ -1,6 +1,7 @@
 <x-ayudas-layout>
     <x-slot name="titulo">
-        AYÚDANOS A <span class="text-conservar-verde">CONSERVAR</span> LA NATURALEZA
+        {!! $titulo !!}
+
     </x-slot>
 
     <x-slot name="texto">{{ $texto }}</x-slot>
