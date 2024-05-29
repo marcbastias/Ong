@@ -55,25 +55,25 @@
     </section>
 
 
-    <section class="mt-36 p-6 rounded-lg">
+    <section class="mt-36 p-6 rounded-lg font-primary font-thin">
         <div class="bg-[#8AB469] p-16 w-3/5 h-[800px] mx-auto">
-            <h1 class="text-white text-3xl font-bold mb-16 text-center">SUSCRÍBETE A NUESTRO NEWSLETTER</h1>
+            <h1 class="text-white text-3xl  mb-16 text-center">SUSCRÍBETE A NUESTRO NEWSLETTER</h1>
             <form method="POST" action="{{ route('subscribe') }}">
                 @csrf
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20 w-11/12 mx-auto text-[17px]">
                     <div>
-                        <label for="nombres" class="font-bold text-white block mb-2">Nombre:</label>
+                        <label for="nombres" class=" text-white block mb-2">Nombre:</label>
                         <input type="text" id="nombres" name="nombres" placeholder="Ingrese su nombre"
                             class="w-full px-4 py-3 border-2 border-white rounded-full bg-[#7ECA42] text-white placeholder-white">
                     </div>
                     <div>
-                        <label for="apellidos" class="font-bold text-white block mb-2">Apellidos:</label>
+                        <label for="apellidos" class=" text-white block mb-2">Apellidos:</label>
                         <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese sus apellidos"
                             class="w-full px-4 py-3 border-2 border-white rounded-full bg-[#7ECA42] text-white placeholder-white">
                     </div>
                 </div>
                 <div class="mb-20 mx-auto text-[17px] overflow-hidden">
-                    <label for="correo" class="font-bold text-white block mb-2">Correo Electrónico:</label>
+                    <label for="correo" class=" text-white block mb-2">Correo Electrónico:</label>
                     <input style="overflow:hidden" type="email" id="correo" name="correo"
                         placeholder="Ingrese su correo electrónico"
                         class="w-full px-4 py-3 border-2 border-white rounded-full bg-[#7ECA42] text-white placeholder-white box-border">
@@ -83,19 +83,19 @@
                     <div class="mb-6">
                         <input type="checkbox" id="mayor_edad" name="mayor_edad" class="mr-2"
                             style="appearance: none; width: 20px; height: 20px; border: 2px solid white; border-radius: 4px; background-color: #7ECA42; outline: none;">
-                        <label class="font-bold text-white" for="mayor_edad">Soy mayor de edad</label>
+                        <label class=" text-white" for="mayor_edad">Soy mayor de edad</label>
                     </div>
                     <div class="mb-6">
                         <input type="checkbox" id="acepto_proteccion_datos" name="acepto_proteccion_datos"
                             class="mr-2"
                             style="appearance: none; width: 20px; height: 20px; border: 2px solid white; border-radius: 4px; background-color: #7ECA42; outline: none;">
-                        <label class="font-bold text-white" for="acepto_proteccion_datos">He leído y acepto la
+                        <label class=" text-white" for="acepto_proteccion_datos">He leído y acepto la
                             información
                             básica sobre la protección de datos*</label>
                     </div>
                 </div>
                 <button type="submit"
-                    class="font-bold mt-28 py-3 px-24 bg-[#7ECA42] text-white rounded-full justify-center items-center mx-auto block">SUSCRIBIRME</button>
+                    class=" mt-28 py-3 px-24 bg-[#7ECA42] text-white rounded-full justify-center items-center mx-auto block">SUSCRIBIRME</button>
             </form>
 
         </div>
@@ -110,42 +110,43 @@
             <hr class="flex-1 border-t-2 border-[#8AB469]">
         </div>
         <div class="flex justify-center gap-28 mt-16 items-center">
-            <!-- Carta 1 -->
-            <div class="w-[380px] bg-[#8AB469] p-4 rounded-[50px] text-center h-[500px]">
-                <img src="../assets/images/tucan_inicio.png" alt="Imagen"
-                    class="w-44 h-44 rounded-full mx-auto mb-4 mt-3">
-                <div class="mt-7">
-                    <h2 class="text-white text-lg font-bold mb-2">QUIERO SER SOCIO/A</h2>
-                    <p class="text-white mb-4 mt-3">Los socios y socias son un pilar y altavoz de nuestro trabajo,
-                        aseguran la defensa de la naturaleza para las generaciones presentes y futuras.</p>
-                </div>
-                <button class="mt-9 py-2 px-14 bg-[#404040] text-white font-bold rounded-full">COLABORAR</button>
-            </div>
-
-            <!-- Carta 2 -->
-            <div class="bg-[#8AB469] p-4 rounded-[50px] text-center w-[380px] h-[500px]">
-                <img src="../assets/images/perro_inicio.png" alt="Imagen"
-                    class="w-44 h-44 rounded-full mx-auto mb-4 mt-3">
-                <div class="mt-7">
-                    <h2 class="text-white text-lg font-bold mb-2">QUIERO HACER UNA DONACIÓN</h2>
-                    <p class="text-white mb-4 mt-3">Los socios y socias son un pilar y altavoz de nuestro trabajo,
-                        aseguran la defensa de la naturaleza para las generaciones presentes y futuras.</p>
-                </div>
-                <button class="mt-9 py-2 px-14 bg-[#404040] text-white font-bold rounded-full">COLABORAR</button>
-            </div>
-
-            <!-- Carta 3 -->
-            <div class="w-[380px] bg-[#8AB469] p-4 rounded-[50px] text-center h-[500px]">
-                <img src="../assets/images/oso_inicio.png" alt="Imagen"
-                    class="w-44 h-44 rounded-full mx-auto mb-4 mt-3">
-                <div class="mt-7">
-                    <h2 class="text-white text-lg font-bold mb-2">ADOPCION SIMBOLICA</h2>
-                    <p class="text-white mb-4 mt-3">Los socios y socias son un pilar y altavoz de nuestro trabajo,
-                        aseguran la defensa de la naturaleza para las generaciones presentes y futuras.</p>
-                </div>
-                <button class="mt-9 py-2 px-14 bg-[#404040] text-white font-bold rounded-full">COLABORAR</button>
-            </div>
+    <!-- Carta 1 -->
+    <div class="w-[380px] bg-[#8AB469] p-4 rounded-[50px] text-center h-[500px]">
+    <img src="../assets/images/perro_inicio.png" alt="Imagen"
+            class="w-44 h-44 rounded-full mx-auto mb-4 mt-3">
+        <div class="mt-7">
+            <h2 class="text-white text-lg font-bold mb-2">ADOPCIÓN SIMBÓLICA</h2>
+            <p class="text-white mb-4 mt-3">Los socios y socias son un pilar y altavoz de nuestro trabajo,
+                aseguran la defensa de la naturaleza para las generaciones presentes y futuras.</p>
         </div>
+        <a href="/colabora/adopta" class="mt-9 py-2 px-14 bg-[#404040] text-white font-bold rounded-full">COLABORAR</a>
+    </div>
+
+    <!-- Carta 2 -->
+    <div class="bg-[#8AB469] p-4 rounded-[50px] text-center w-[380px] h-[500px]">
+        <img src="../assets/images/tucan_inicio.png" alt="Imagen"
+            class="w-44 h-44 rounded-full mx-auto mb-4 mt-3">
+        <div class="mt-7">
+            <h2 class="text-white text-lg font-bold mb-2">ANIMALES AMENAZADOS</h2>
+            <p class="text-white mb-4 mt-3">Los socios y socias son un pilar y altavoz de nuestro trabajo,
+                aseguran la defensa de la naturaleza para las generaciones presentes y futuras.</p>
+        </div>
+        <a href="/colabora/animalesAmenazados" class="mt-9 py-2 px-14 bg-[#404040] text-white font-bold rounded-full">COLABORAR</a>
+    </div>
+
+    <!-- Carta 3 -->
+    <div class="w-[380px] bg-[#8AB469] p-4 rounded-[50px] text-center h-[500px]">
+        <img src="../assets/images/oso_inicio.png" alt="Imagen"
+            class="w-44 h-44 rounded-full mx-auto mb-4 mt-3">
+        <div class="mt-7">
+            <h2 class="text-white text-lg font-bold mb-2">ANIMALES EXPLOTADOS</h2>
+            <p class="text-white mb-4 mt-3">Los socios y socias son un pilar y altavoz de nuestro trabajo,
+                aseguran la defensa de la naturaleza para las generaciones presentes y futuras.</p>
+        </div>
+        <a href="/colabora/animalesExplotados" class="mt-9 py-2 px-14 bg-[#404040] text-white font-bold rounded-full">COLABORAR</a>
+    </div>
+</div>
+
     </section>
 
 

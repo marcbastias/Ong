@@ -3,8 +3,8 @@
     <section class="min-h-screen bg-[#404040] flex flex-col">
 
         <div class="flex items-start justify-start px-8 py-8">
-            <x-application-logo class="block h-9 w-auto" />
-        </div>
+            <x-application-logo-login class="block h-9 w-auto " />
+        </div> 
 
         <div class="px-28 py-10">
             <h1 class="text-white font-bold text-4xl font-inter">BIENVENIDO</h1>

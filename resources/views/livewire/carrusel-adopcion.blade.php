@@ -222,27 +222,43 @@
 
             <div class="slide flex">
                 <div class="slide-item">
-                    <img src="../assets/images/carrusel-img/1.png" alt="">
+                    <img src="../assets/images/carrusel-img/chimpanceGrande.jpg" alt="">
                     <div class="overlay">
-                        <h1 class="overlay_title">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
-                        <p class="overlay_text">hola</p>
+                        <h1 class="overlay_title">Adopta un chimpancé, es parte de nuestro árbol familiar </h1>
+                        <p class="overlay_text">Inteligente y sociable, compartimos con él un 98% de nuestro ADN. </p>
                     </div>
                 </div>
                 <div class="slide-item">
-                    <img src="../assets/images/carrusel-img/2.png" alt="">
-                    <div class="overlay">Texto sobre imagen 2</div>
+                    <img src="../assets/images/carrusel-img/delfinGrande.jpg" alt="">
+                    <div class="overlay">
+                        <h1 class="overlay_title">Adopta un delfín, por un santuario de cetáceos en Canarias </h1>
+                        <p class="overlay_text">Frente a Lanzarote y Fuerteventura vive un tercio de los cetáceos del
+                            planeta.
+                        </p>
+                    </div>
                 </div>
                 <div class="slide-item">
-                    <img src="../assets/images/carrusel-img/3.png" alt="">
-                    <div class="overlay">Texto sobre imagen 3</div>
+                    <img src="../assets/images/carrusel-img/elefanteGrande.jpg" alt="">
+                    <div class="overlay">
+                        <h1 class="overlay_title">Adopta un elefante para detener el tráfico ilegal de marfil </h1>
+                        <p class="overlay_text">Cada 15 minutos un elefante es asesinado para vender su marfil. </p>
+                    </div>
                 </div>
                 <div class="slide-item">
-                    <img src="../assets/images/carrusel-img/3.png" alt="">
-                    <div class="overlay">Texto sobre imagen 4</div>
+                    <img src="../assets/images/carrusel-img/focaGrande.jpg" alt="">
+                    <div class="overlay">
+                        <h1 class="overlay_title">Adopta una foca, nuestro futuro depende de su bienestar </h1>
+                        <p class="overlay_text">Debido al deshielo, muchas crías de focas mueren al zambullirse en el
+                            mar antes de almacenar la grasa que las proteja del frío. </p>
+                    </div>
                 </div>
                 <div class="slide-item">
-                    <img src="../assets/images/carrusel-img/2.png" alt="">
-                    <div class="overlay">Texto sobre imagen 5</div>
+                    <img src="../assets/images/carrusel-img/orangutanGrande.jpg" alt="">
+                    <div class="overlay">
+                        <h1 class="overlay_title"> Adopta un orangután, el hombre del bosque tropical </h1>
+                        <p class="overlay_text">Hace un siglo cientos de miles de orangutanes abrazaban las selvas del
+                            Sudeste Asiático. </p>
+                    </div>
                 </div>
             </div>
 
@@ -264,19 +280,19 @@
 
         <div class="cards">
             <label class="card" for="item-1" id="circle-1" onclick="selectCard(0)">
-                <img src="../assets/images/carrusel-img/animal1.png" alt="circle">
+                <img class=" rounded-full" src="../assets/images/carrusel-img/foca.jpg" alt="circle">
             </label>
             <label class="card" for="item-2" id="circle-2" onclick="selectCard(1)">
-                <img src="../assets/images/carrusel-img/animal2.png" alt="circle">
+                <img class=" rounded-full" src="../assets/images/carrusel-img/orangutan.jpg" alt="circle">
             </label>
             <label class="card" for="item-3" id="circle-3" onclick="selectCard(2)">
-                <img src="../assets/images/carrusel-img/animal3.png" alt="circle">
+                <img class=" rounded-full" src="../assets/images/carrusel-img/chimpance.jpg" alt="circle">
             </label>
             <label class="card" for="item-4" id="circle-4" onclick="selectCard(3)">
-                <img src="../assets/images/carrusel-img/animal4.png" alt="circle">
+                <img class=" rounded-full" src="../assets/images/carrusel-img/delfin.jpg" alt="circle">
             </label>
             <label class="card" for="item-5" id="circle-5" onclick="selectCard(4)">
-                <img src="../assets/images/carrusel-img/animal5.png" alt="circle">
+                <img class=" rounded-full" src="../assets/images/carrusel-img/elefante.jpg" alt="circle">
             </label>
         </div>
         <button class="prev-btn absolute top-1/2 left-0 transform -translate-y-1/2" onclick="prevSlide()">
