@@ -110,42 +110,43 @@
             <hr class="flex-1 border-t-2 border-[#8AB469]">
         </div>
         <div class="flex justify-center gap-28 mt-16 items-center">
-            <!-- Carta 1 -->
-            <div class="w-[380px] bg-[#8AB469] p-4 rounded-[50px] text-center h-[500px]">
-                <img src="../assets/images/tucan_inicio.png" alt="Imagen"
-                    class="w-44 h-44 rounded-full mx-auto mb-4 mt-3">
-                <div class="mt-7">
-                    <h2 class="text-white text-lg font-bold mb-2">QUIERO SER SOCIO/A</h2>
-                    <p class="text-white mb-4 mt-3">Los socios y socias son un pilar y altavoz de nuestro trabajo,
-                        aseguran la defensa de la naturaleza para las generaciones presentes y futuras.</p>
-                </div>
-                <button class="mt-9 py-2 px-14 bg-[#404040] text-white font-bold rounded-full">COLABORAR</button>
-            </div>
-
-            <!-- Carta 2 -->
-            <div class="bg-[#8AB469] p-4 rounded-[50px] text-center w-[380px] h-[500px]">
-                <img src="../assets/images/perro_inicio.png" alt="Imagen"
-                    class="w-44 h-44 rounded-full mx-auto mb-4 mt-3">
-                <div class="mt-7">
-                    <h2 class="text-white text-lg font-bold mb-2">QUIERO HACER UNA DONACIÓN</h2>
-                    <p class="text-white mb-4 mt-3">Los socios y socias son un pilar y altavoz de nuestro trabajo,
-                        aseguran la defensa de la naturaleza para las generaciones presentes y futuras.</p>
-                </div>
-                <button class="mt-9 py-2 px-14 bg-[#404040] text-white font-bold rounded-full">COLABORAR</button>
-            </div>
-
-            <!-- Carta 3 -->
-            <div class="w-[380px] bg-[#8AB469] p-4 rounded-[50px] text-center h-[500px]">
-                <img src="../assets/images/oso_inicio.png" alt="Imagen"
-                    class="w-44 h-44 rounded-full mx-auto mb-4 mt-3">
-                <div class="mt-7">
-                    <h2 class="text-white text-lg font-bold mb-2">ADOPCION SIMBOLICA</h2>
-                    <p class="text-white mb-4 mt-3">Los socios y socias son un pilar y altavoz de nuestro trabajo,
-                        aseguran la defensa de la naturaleza para las generaciones presentes y futuras.</p>
-                </div>
-                <button class="mt-9 py-2 px-14 bg-[#404040] text-white font-bold rounded-full">COLABORAR</button>
-            </div>
+    <!-- Carta 1 -->
+    <div class="w-[380px] bg-[#8AB469] p-4 rounded-[50px] text-center h-[500px]">
+    <img src="../assets/images/perro_inicio.png" alt="Imagen"
+            class="w-44 h-44 rounded-full mx-auto mb-4 mt-3">
+        <div class="mt-7">
+            <h2 class="text-white text-lg font-bold mb-2">ADOPCIÓN SIMBÓLICA</h2>
+            <p class="text-white mb-4 mt-3">Los socios y socias son un pilar y altavoz de nuestro trabajo,
+                aseguran la defensa de la naturaleza para las generaciones presentes y futuras.</p>
         </div>
+        <a href="/colabora/adopta" class="mt-9 py-2 px-14 bg-[#404040] text-white font-bold rounded-full">COLABORAR</a>
+    </div>
+
+    <!-- Carta 2 -->
+    <div class="bg-[#8AB469] p-4 rounded-[50px] text-center w-[380px] h-[500px]">
+        <img src="../assets/images/tucan_inicio.png" alt="Imagen"
+            class="w-44 h-44 rounded-full mx-auto mb-4 mt-3">
+        <div class="mt-7">
+            <h2 class="text-white text-lg font-bold mb-2">ANIMALES AMENAZADOS</h2>
+            <p class="text-white mb-4 mt-3">Los socios y socias son un pilar y altavoz de nuestro trabajo,
+                aseguran la defensa de la naturaleza para las generaciones presentes y futuras.</p>
+        </div>
+        <a href="/colabora/animalesAmenazados" class="mt-9 py-2 px-14 bg-[#404040] text-white font-bold rounded-full">COLABORAR</a>
+    </div>
+
+    <!-- Carta 3 -->
+    <div class="w-[380px] bg-[#8AB469] p-4 rounded-[50px] text-center h-[500px]">
+        <img src="../assets/images/oso_inicio.png" alt="Imagen"
+            class="w-44 h-44 rounded-full mx-auto mb-4 mt-3">
+        <div class="mt-7">
+            <h2 class="text-white text-lg font-bold mb-2">ANIMALES EXPLOTADOS</h2>
+            <p class="text-white mb-4 mt-3">Los socios y socias son un pilar y altavoz de nuestro trabajo,
+                aseguran la defensa de la naturaleza para las generaciones presentes y futuras.</p>
+        </div>
+        <a href="/colabora/animalesExplotados" class="mt-9 py-2 px-14 bg-[#404040] text-white font-bold rounded-full">COLABORAR</a>
+    </div>
+</div>
+
     </section>
 
 
