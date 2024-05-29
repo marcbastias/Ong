@@ -1,34 +1,37 @@
 <x-app-layout>
     <div>
-        <main class="pb-4">
-            <div class="bg-cover bg-center bg-no-repeat flex justify-center items-center flex-col text-center"
-                style="background-image: url('../assets/images/blog.png'); height: 50vh;">
-                <p class="font-bold text-5xl text-black">
-                    BL<span style="color: #4CAF50;">OG</span>
+        <main class="pb-4 text-white">
+           <div class="bg-cover bg-center bg-no-repeat relative flex justify-center items-center flex-col text-center" style="background-image: url('../assets/images/blog.png'); height: 50vh;">
+
+                <p class="font-bold text-5xl mb-20">
+                    BLOG</span>
                 </p>
                 <p class="text-2xl mt-4" style="max-width: 70%;">
                     En nuestra ONG, nos dedicamos apasionadamente a la protección y el bienestar de los animales en
-                    situación de vulnerabilidad en todo el mundo. Durante mucho tiempo, hemos estado en la vanguardia de
-                    la lucha contra la extinción, el maltrato y el abandono de animales, trabajando incansablemente para
-                    asegurar un futuro más brillante para todas las especies.
+                    situación de vulnerabilidad en todo el mundo. A través de nuestro blog, compartimos historias,
+                    noticias y recursos para concienciar a la sociedad sobre la importancia de la protección animal y
+                    promover el respeto hacia todas las especies. Creemos que al informar y educar a las personas,
+                    podemos inspirar cambios positivos en la forma en que tratamos a los animales y trabajar hacia un
+                    futuro más compasivo y justo para todas las criaturas.
                 </p>
             </div>
         </main>
     </div>
 
-    <section class="mt-24 p-16">
+    <section class="mt-20 p-16">
         <div class="flex items-center justify-center mb-4 mt-2">
             <hr class="flex-1 border-t-2 border-[#8AB469]">
             <p class="font-bold mx-4 text-[#8AB469] text-3xl">LOS POSTS</p>
             <hr class="flex-1 border-t-2 border-[#8AB469]">
         </div>
         <div class="mx-56 flex justify-center p-8">
-            <p class="text-center text-3xl">
-                En nuestra ONG, nos dedicamos apasionadamente a la protección y el bienestar de los animales en
-                situación de vulnerabilidad en todo el mundo. Durante mucho timepo, hemos estado en la vanguardia de la
-                lucha contra la extinción, el maltrato y el abandono de animales, trabajando incansablemente para
-                asegurar un futuro más brillante para todas las especies.
-            </p>
+            <p class="text-center text-xl">
+                Nuestro blog es una herramienta vital para compartir información y generar conciencia sobre los
+                desafíos que enfrentan los animales en todo el mundo. A través de nuestros artículos, destacamos
+                temas importantes como la conservación de especies en peligro de extinción, el bienestar animal y la
+                crueldad hacia los animales. Creemos en la importancia de dar voz a aquellos que no pueden hablar por
+                sí mismos y trabajar activamente para proteger sus derechos y mejorar sus vidas.
+            
         </div>
     </section>
 

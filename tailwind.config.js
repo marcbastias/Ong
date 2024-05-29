@@ -18,6 +18,8 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                primary: ['Koulen', 'sans-serif'],
+                
             },
             colors: {
                 customColor: {

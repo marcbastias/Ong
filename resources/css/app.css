@@ -17,3 +17,11 @@
     --another-color-2: #A7DD7D;
     --another-color-3: #8A8F85;
 }
+@font-face {
+    font-family: 'Koulen';
+    src: url('../../public/fonts/Koulen-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+

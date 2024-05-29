@@ -3,9 +3,9 @@
 </head>
 
 <nav style="background-color: #8ab469;">
-    <div>
+    <div >
         <ul class="flex items-center justify-center gap-10">
-            <div class="flex gap-10 text-xl font-mono">
+            <div class="flex gap-20 font-primary text-2xl">
                 <li><a href="/" class="text-white hover:text-black">Inicio</a></li>
                 <li><a href="/somos" class="text-white hover:text-black">Somos</a></li>
                 <li class="relative">
@@ -13,45 +13,35 @@
                     <div id="informate" class="absolute bg-white p-4 rounded-md shadow-lg hidden border border-gray-300 z-10 transform origin-top transition-all duration-300 ease-in-out scale-y-0" data-visible="false" onclick="event.stopPropagation()">
                         <a href="/informate/newsletter" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Newsletter</a>
                         <div class="border-t border-gray-300"></div>
-                        <a href="/posts" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Blog</a>
                         <div class="border-t border-gray-300"></div>
-                        <a href="/contacto"
-                            class="block text-gray-800 py-2 px-4 transition-colors duration-300">Contacta</a>
+                        <a href="/contacto" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Contacta</a>
                     </div>
                 </li>
             </div>
             <div class="flex items-center">
-                <x-application-logo class="block h-9 w-auto" />
+                <x-application-logo class="block h-9 w-auto pr-10 pl-10" />
             </div>
-            <div class="flex gap-10 text-xl font-mono">
+            <div class="flex gap-20 font-primary text-2xl">
                 <li class="relative">
-                    <a href="#" class="text-white hover:text-black"
-                        onclick="toggleDropdown(event, 'trabajo')">Nuestro Trabajo</a>
-                    <div id="trabajo"
-                        class="absolute bg-white p-4 rounded-md shadow-lg hidden border border-gray-300 z-10 transform origin-top transition-all duration-300 ease-in-out scale-y-0"
-                        data-visible="false" onclick="event.stopPropagation()">
-                        <a href="/trabajo/especies"
-                            class="block text-gray-800 py-2 px-4 transition-colors duration-300">Especies</a>
+                    <a href="#" class="text-white hover:text-black" onclick="toggleDropdown(event, 'trabajo')">Nuestro Trabajo</a>
+                    <div id="trabajo" class="absolute bg-white p-4 rounded-md shadow-lg hidden border border-gray-300 z-10 transform origin-top transition-all duration-300 ease-in-out scale-y-0" data-visible="false" onclick="event.stopPropagation()">
+                        <a href="/trabajo/especies" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Especies</a>
                         <div class="border-t border-gray-300"></div>
-                        <a href="/trabajo/voluntariado"
-                            class="block text-gray-800 py-2 px-4 transition-colors duration-300">Voluntariado</a>
+                        <a href="/trabajo/voluntariado" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Voluntariado</a>
                     </div>
                 </li>
                 <li class="relative">
-                    <a href="#" class="text-white hover:text-black"
-                        onclick="toggleDropdown(event, 'colabora')">Colabora</a>
-                    <div id="colabora"
-                        class="absolute bg-white p-4 rounded-md shadow-lg hidden border border-gray-300 z-10 transform origin-top transition-all duration-300 ease-in-out scale-y-0"
-                        data-visible="false" onclick="event.stopPropagation()">
-                        <a href="/colabora/adopta"
-                            class="block text-gray-800 py-2 px-4 transition-colors duration-300">Adopta</a>
+                    <a href="#" class="text-white hover:text-black" onclick="toggleDropdown(event, 'colabora')">Colabora</a>
+                    <div id="colabora" class="absolute bg-white p-4 rounded-md shadow-lg hidden border border-gray-300 z-10 transform origin-top transition-all duration-300 ease-in-out scale-y-0" data-visible="false" onclick="event.stopPropagation()">
+                        <a href="/colabora/adopta" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Adopta</a>
                         <div class="border-t border-gray-300"></div>
-                        <a href="/colabora/animalesAmenazados"
-                            class="block text-gray-800 py-2 px-4 transition-colors duration-300">Animales amenazados</a>
+                        <a href="/colabora/animalesAmenazados" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Animales amenazados</a>
                         <div class="border-t border-gray-300"></div>
-                        <a href="/colabora/animalesExplotados"
-                            class="block text-gray-800 py-2 px-4 transition-colors duration-300">Animales explotados</a>
+                        <a href="/colabora/animalesExplotados" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Animales explotados</a>
                     </div>
+                </li>
+                <li class="relative">
+                    <a href="/posts" class="text-white hover:text-black">Blog</a>
                 </li>
             </div>
         </ul>
