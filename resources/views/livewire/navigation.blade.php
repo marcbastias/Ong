@@ -19,7 +19,7 @@
                 </li>
             </div>
             <div class="flex items-center">
-                <x-application-logo class="block h-9 w-auto pr-10 pl-10" />
+                <img src="../../assets/images/logo.png"  alt="nav Logo" class="block h-32 w-auto pr-10 pl-10" >
             </div>
             <div class="flex gap-20 font-primary text-2xl">
                 <li class="relative">

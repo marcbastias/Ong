@@ -70,6 +70,7 @@ return [
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'd-none', // Oculta la versión grande del logo
     'logo_img_alt' => 'Admin Logo',
+    'logo_img_style' => 'opacity: 0 !important;',
 
 
 
@@ -94,6 +95,7 @@ return [
             'class' => '',
             'width' => 50,
             'height' => 50,
+            
         ],
     ],
 

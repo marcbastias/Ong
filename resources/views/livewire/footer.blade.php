@@ -3,7 +3,7 @@
         <div class="flex items-center bg-[#8A8F85]">
             <!-- Primera mitad: logo -->
             <div class="w-1/2 bg-[#8AB469] justify-center items-center flex">
-                <img src="../assets/images/logoFooter3.png" class="w-[18%]" alt="Footer Logo">
+                <img src="../assets/images/logo.png" class="w-[18%]" alt="Footer Logo">
             </div>
             <!-- Segunda mitad: texto -->
             <div class="w-1/2 pl-4 bg-[#8A8F85]">

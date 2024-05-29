@@ -8,23 +8,7 @@
 @section('content')
     <div class="row">
         <div class="col-4">
-            <div class="col-md-15">
-                <div class="card bg-white shadow-lg rounded">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Recuadro 1</h5>
-                        <p class="card-text text-center">¡Bienvenido!</p>
-                        <label class="switch-button" for="switch">
-                            <div class="switch-outer">
-                                <input id="switch" type="checkbox">
-                                <div class="button">
-                                    <span class="button-toggle"></span>
-                                    <span class="button-indicator"></span>
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-            </div>
+        
             <div class="col-md-15">
                 <div class="card bg-white text-white shadow-lg rounded">
 

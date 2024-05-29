@@ -1,20 +1,18 @@
 <x-app-layout>
-
     <div>
-
         <main class="pb-4">
-            <div class="bg-cover bg-center bg-no-repeat h-screen flex justify-center items-center flex-col"
-                style="background-image: url('./assets/images/backgroundHome1.png');">
-                <p class="font-bold text-3xl text-black text-center">AYÚDANOS A <span
-                        style="color: #4CAF50;">CONSERVAR</span>
-                    <br>LA NATURALEZA
-                </p>
+            <div class="bg-cover bg-center bg-no-repeat flex justify-center items-center flex-col h-[60vh]" style="background-image: url('./assets/images/home.jpg');">
+                <div class="bg-gray-200 p-4 inline-block">
+                    <p class="font-bold text-3xl text-black text-center">AYÚDANOS A <span style="color: #4CAF50;">CONSERVAR</span><br>LA NATURALEZA</p>
+                </div>
             </div>
         </main>
-
     </div>
+    
+    
+    
 
-    <section class="mt-24 p-16">
+    <section class="mt-24 p-8">
         <div class="flex items-center justify-center mb-6 mt-8">
             <hr class="flex-1 border-t-2 border-[#8AB469]">
             <p class="font-bold mx-4 text-[#8AB469] text-3xl">AYÚDANOS A CONSERVAR</p>
