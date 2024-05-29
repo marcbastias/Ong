@@ -24,6 +24,7 @@
                     </div>
                 </li>
             </div>
+
             <div class="flex items-center">
                 <x-application-logo class="block h-9 w-auto" />
             </div>
