@@ -18,6 +18,7 @@
                     </div>
                 </li>
             </div>
+
             <div class="flex items-center">
                 <img src="../../assets/images/logo.png"  alt="nav Logo" class="block h-32 w-auto pr-10 pl-10" >
             </div>

@@ -19,7 +19,7 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
                 primary: ['Koulen', 'sans-serif'],
-                
+
             },
             colors: {
                 customColor: {
