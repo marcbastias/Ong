@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -22,6 +23,9 @@ class CreateEventsTable extends Migration
             $table->foreignId('organizer_id')->nullable()->constrained('users')->onDelete('SET NULL');
             $table->timestamps();
         });
+
+        // Seed the table after it's created
+        $this->seed();
     }
 
     /**
@@ -33,5 +37,14 @@ class CreateEventsTable extends Migration
     {
         Schema::dropIfExists('events');
     }
-}
 
+    /**
+     * Seed the events table.
+     *
+     * @return void
+     */
+    protected function seed()
+    {
+        // Seed events data here
+    }
+}

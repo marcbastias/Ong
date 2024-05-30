@@ -37,7 +37,7 @@
             @foreach ($posts as $post)
                 <article class="flex shadow-lg rounded-lg overflow-hidden" style="background-color: #8AB469">
                     <a href="{{ route('posts.show', $post) }}" class="w-1/3 bg-cover bg-center" 
-                        style="background-image: url(@if ($post->image) {{ Storage::url($post->image->url) }} @else https://cdn.pixabay.com/photo/2017/02/14/19/16/php-2066704_1280.jpg @endif)">
+                        style="background-image: url"( @if ($post->image) {{ Storage::url($post->image->url) }} @else https://cdn.pixabay.com/photo/2017/02/14/19/16/php-2066704_1280.jpg @endif)">
                     </a>
                     <div class="w-2/3 p-4 flex flex-col justify-between">
                         <div>

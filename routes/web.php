@@ -6,10 +6,10 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ColaboraController;
 use App\Http\Controllers\SocialController;
 use App\Http\Controllers\PrivacidadController;
-use App\Http\Controllers\InformateController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EspeciesController;
+use App\Http\Controllers\EventoController;
 use App\Http\Controllers\NewsletterController;
 
 
@@ -48,7 +48,6 @@ Route::prefix('informate')->group(function () {
 // Rutas para la sección "Trabajo"
 Route::prefix('trabajo')->group(function () {
     Route::view('/especies', 'front-client.trabajo.especies');
-    Route::view('/voluntariado', 'front-client.trabajo.voluntariado');
 });
 Route::controller(PostController::class)->group(function () {
     Route::get('/posts', 'index')->name('posts.index');
@@ -56,6 +55,12 @@ Route::controller(PostController::class)->group(function () {
     Route::get('/category/{category}', 'category')->name('posts.category');
     Route::get('/tag/{tag}', 'tag')->name('posts.tag');
 });
+
+Route::controller(EventoController::class)->group(function () {
+    Route::get('/events', 'index')->name('events.index');
+
+});
+
 // Rutas para la sección "Colabora"
 Route::prefix('colabora')->group(function () {
     Route::get('/adopta', [ColaboraController::class, 'adopta'])->name('colabora.adopta');
