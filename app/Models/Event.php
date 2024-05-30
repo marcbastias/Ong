@@ -14,7 +14,7 @@ class Event extends Model
     // Relación M:1
     public function organizer()
     {
-        return $this->belongsTo(User::class, 'id'); // Suponiendo que el campo de clave foránea es 'organizer_id'
+        return $this->belongsTo(User::class, 'id'); 
     }
 
     // Validaciones

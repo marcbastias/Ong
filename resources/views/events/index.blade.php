@@ -17,16 +17,18 @@
         </div>
         <div class="flex justify-center p-8">
             <p class="text-center text-2xl">
-                Unirse al voluntariado es una de las maneras más significativas de contribuir al bienestar de tu comunidad. Al dedicar tu tiempo y habilidades, puedes marcar una diferencia real en la vida de los demás y en el entorno que te rodea. No solo ayudas a quienes lo necesitan, sino que también enriqueces tu propia vida a través de nuevas experiencias, conocimientos y amistades.
-                Tu colaboración es invaluable. Ya sea en la educación, la salud, el medio ambiente o la asistencia social, cada esfuerzo cuenta. Te invitamos a ser parte de este cambio positivo. ¡Sé voluntario y ayúdanos a construir un mundo mejor!
+                Unirse al voluntariado es una de las maneras más significativas de contribuir al bienestar de tu comunidad. Al dedicar tu tiempo y habilidades, puedes marcar una diferencia real en la vida de los demás y en el entorno que te rodea. No solo ayudas a quienes lo necesitan, sino que también enriqueces tu propia vida a través de nuevas experiencias, conocimientos y amistades. Tu colaboración es invaluable. Ya sea en la educación, la salud, el medio ambiente o la asistencia social, cada esfuerzo cuenta. Te invitamos a ser parte de este cambio positivo. ¡Sé voluntario y ayúdanos a construir un mundo mejor!
             </p>
         </div>
 
         <!-- Bloque para mostrar los eventos -->
-        <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-6">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
             @foreach ($events as $event)
                 <div class="flex justify-center items-center bg-gray-200 p-4 rounded-lg">
                     <a href="{{ route('events.show', $event) }}" class="block w-full h-full">
+                        {{-- Aquí se muestra la imagen --}}
+                        <img src="{{ $event->url }}" alt="{{ $event->name }}" class="w-full h-auto mb-4">
+                        {{-- Información del evento --}}
                         <h2 class="text-xl font-bold">{{ $event->name }}</h2>
                         <p class="text-gray-600">{{ $event->description }}</p>
                         <p class="text-gray-600">Ubicación: {{ $event->location }}</p>

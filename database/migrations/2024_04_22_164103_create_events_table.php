@@ -17,10 +17,10 @@ class CreateEventsTable extends Migration
             $table->id();
             $table->string('name', 100);
             $table->text('description')->nullable();
+            $table->text('url')->nullable();
             $table->string('location')->nullable();
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
-            $table->foreignId('organizer_id')->nullable()->constrained('users')->onDelete('SET NULL');
             $table->timestamps();
         });
 

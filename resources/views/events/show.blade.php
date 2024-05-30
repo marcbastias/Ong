@@ -4,13 +4,15 @@
 
             {{-- Contenido principal --}}
             <div class="text-center">
+                {{-- Aquí se muestra la imagen --}}
+                <img src="{{ $event->url }}" alt="{{ $event->name }}" class="w-full h-auto mb-4">
                 <h2 class="text-4xl font-bold text-green-600 mb-4">{{ $event->name }}</h2>
                 <div class="text-lg text-black font-bold mb-4 mt-2">
                     {{ $event->description }}
                 </div>
                 <div class="text-base text-gray-500 text-justify">
-                    <p><strong>Start Date:</strong> {{ $event->start_date->format('M d, Y') }}</p>
-                    <p><strong>End Date:</strong> {{ $event->end_date->format('M d, Y') }}</p>
+                    <p><strong>Start Date:</strong> {{ $event->start_date }}</p>
+                    <p><strong>End Date:</strong> {{ $event->end_date }}</p>
                     <p><strong>Location:</strong> {{ $event->location }}</p>
                 </div>
                 <div class="mt-4 flex items-center justify-center text-sm text-gray-600">
