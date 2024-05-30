@@ -36,12 +36,21 @@ class EventoController extends Controller
         return redirect()->route('events.index')->with('success', 'Evento creado correctamente.');
     }
 
-
-    public function show(Event $events)
+    public function show(Event $event)
     {
-        return view('mostrar_evento', compact('event'));
+        $event->start_date = \Carbon\Carbon::parse($event->start_date);
+        $event->end_date = \Carbon\Carbon::parse($event->end_date);
+    
+        $similars = Event::where('location', $event->location)
+                         ->where('start_date', '>=', $event->start_date)
+                         ->where('id', '!=', $event->id)
+                         ->orderBy('start_date')
+                         ->take(4)
+                         ->get();
+    
+        return view('events.show', compact('event', 'similars'));
     }
-
+    
 
     public function edit(Event $events)
     {

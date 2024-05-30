@@ -26,11 +26,13 @@
         <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-6">
             @foreach ($events as $event)
                 <div class="flex justify-center items-center bg-gray-200 p-4 rounded-lg">
-                    <h2 class="text-xl font-bold">{{ $event->name }}</h2>
-                    <p class="text-gray-600">{{ $event->description }}</p>
-                    <p class="text-gray-600">Ubicación: {{ $event->location }}</p>
-                    <p class="text-gray-600">Fecha de inicio: {{ $event->start_date }}</p>
-                    <p class="text-gray-600">Fecha de fin: {{ $event->end_date }}</p>
+                    <a href="{{ route('events.show', $event) }}" class="block w-full h-full">
+                        <h2 class="text-xl font-bold">{{ $event->name }}</h2>
+                        <p class="text-gray-600">{{ $event->description }}</p>
+                        <p class="text-gray-600">Ubicación: {{ $event->location }}</p>
+                        <p class="text-gray-600">Fecha de inicio: {{ $event->start_date }}</p>
+                        <p class="text-gray-600">Fecha de fin: {{ $event->end_date }}</p>
+                    </a>
                 </div>
             @endforeach
         </div>

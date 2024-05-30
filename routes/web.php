@@ -58,6 +58,7 @@ Route::controller(PostController::class)->group(function () {
 
 Route::controller(EventoController::class)->group(function () {
     Route::get('/events', 'index')->name('events.index');
+    Route::get('/events/{event}', 'show')->name('events.show');
 
 });
 
