@@ -35,7 +35,7 @@
                     @foreach ($similars as $similar)
                         <article class="flex shadow-lg rounded-lg overflow-hidden" style="background-color: #8AB469">
                             <a href="{{ route('posts.show', $similar) }}" class="w-1/3 bg-cover bg-center" 
-                                style="background-image: url(@if ($similar->image) {{ Storage::url($similar->image->url) }} @else {{ asset('images/default-post-image.jpg') }} @endif)">
+                                style="background-image: url"(@if ($similar->image) {{ Storage::url($similar->image->url) }} @else {{ asset('images/default-post-image.jpg') }} @endif)">
                             </a>
                             <div class="w-2/3 p-4 flex flex-col justify-between">
                                 <div>
