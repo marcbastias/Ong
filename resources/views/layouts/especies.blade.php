@@ -40,27 +40,26 @@
             <img src="{{ $imagen }}" alt="" class="object-cover shadow-2xl shadow-zinc-900">
         </div>
     </div>
-    <div class="text-center mt-40 font-bold">
-        <h1 class="text-4xl text-white">{{ $segundoTitulo }}</h1>
+
+    <!-- New sections start here -->
+    <div class="mt-40 font-bold text-white px-28">
+        <h1 class="text-4xl">{{ $segundoTitulo }}</h1>
+        <h3 class="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-4 text-justify">{{ $segundoTexto }}</h3>
     </div>
 
-    <!-- Estilo para la palabra "conservar" -->
-    <style>
-        .text-conservar-verde {
-            color: #7ECA42;
-        }
+    <div class="mt-20 font-bold text-white px-28">
+        <h2 class="text-3xl">Amenazas</h2> <br>
+        <p class="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-4 text-justify">{{ $amenzas }}</p>
+    </div>
 
-        .text-conservar-rojo {
-            color: #CA4242;
-        }
-
-        .text-conservar-amarillo {
-            color: #BFCA42;
-        }
-    </style>
+    <div class="mt-20 font-bold text-white px-28">
+        <h2 class="text-3xl">Soluciones</h2> <br>
+        <p class="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-4 text-justify">{{ $solucion }}</p>
+    </div>v>
 
     <!-- Importar el componente de carrusel de adopción -->
 
+    @livewireScripts
 </body>
 
 </html>
