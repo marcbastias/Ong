@@ -261,7 +261,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
     <!-- Carrusel pequeño -->

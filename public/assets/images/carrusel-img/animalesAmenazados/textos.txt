@@ -1,0 +1,14 @@
+"Guardián de la Selva"
+Jaguar: El majestuoso jaguar, conocido por su fuerza y agilidad, enfrenta la amenaza de la deforestación y la caza furtiva. Su hábitat en las selvas de América Latina se reduce cada año, poniendo en peligro su supervivencia.
+
+"Rey en Peligro"
+León: El rey de la selva está en peligro. La disminución de sus presas naturales y el conflicto con humanos han llevado a los leones africanos a un alarmante declive poblacional, requiriendo acciones urgentes para su conservación.
+
+"Ícono Vulnerable"
+Panda: Este icónico símbolo de la conservación enfrenta un futuro incierto. La pérdida de su hábitat debido a la expansión agrícola en China pone en riesgo a los pandas gigantes, aunque los esfuerzos de conservación están mostrando signos de esperanza.
+
+"Gracia en Riesgo"
+Mantaraya: Las mantarrayas, con sus gráciles movimientos en los océanos, están amenazadas por la pesca excesiva y la degradación de los arrecifes. La falta de regulación en la pesca pone a estas impresionantes criaturas en peligro.
+
+"Guardianes del Océano Amenazados"
+Tiburones: Los tiburones, esenciales para el equilibrio de los ecosistemas marinos, sufren una drástica disminución debido a la pesca intensiva y la demanda de sus aletas. La protección de estas especies es crucial para mantener la salud de los océanos.

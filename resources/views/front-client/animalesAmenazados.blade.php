@@ -14,4 +14,7 @@
     <x-slot name="segundoTitulo">
         {{ $segundoTitulo }}
     </x-slot>
+    
+    
 </x-ayudas-layout>
+
