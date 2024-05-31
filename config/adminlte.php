@@ -66,11 +66,12 @@ return [
 
     'logo' => '<span class="d-inline-block align-middle"></span>',
     'logo_img' => 'vendor/adminlte/dist/img/logo.png',
-    'logo_img_class' => 'img-fluid', // Clase para hacer que la imagen del logo sea fluida y se ajuste al contenedor
+    'logo_img_class' => 'img-fluid h-20 w-20', // Ajusta el tamaño usando Tailwind
     'logo_img_xl' => null,
-    'logo_img_xl_class' => 'd-none', // Oculta la versión grande del logo
+    'logo_img_xl_class' => 'd-none', 
     'logo_img_alt' => 'Admin Logo',
-    'logo_img_style' => 'opacity: 0 !important;',
+    
+    
 
 
 
@@ -190,19 +191,18 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Layout-and-Styling-Configuration
     |
     */
-
-    'classes_body' => 'bg-white font-sans antialiased',
-    'classes_brand' => 'bg-blue-500 text-white',
+    'classes_body' => 'bg-white font-sans',
+    'classes_brand' => 'bg-blue-500 text-white', // Asegura que la marca no tenga opacidad
     'classes_brand_text' => '',
     'classes_content_wrapper' => 'min-h-screen bg-gray-100',
     'classes_content_header' => '',
     'classes_content' => 'max-w-7xl mx-auto py-6 sm:px-6 lg:px-8',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'bg-custom-color-dashboard navbar-light text-white',
+    'classes_topnav' => 'bg-custom-color-dashboard navbar-light text-white ', // Asegura que la barra superior no tenga opacidad
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
-
+    
 
     /*
     |--------------------------------------------------------------------------
