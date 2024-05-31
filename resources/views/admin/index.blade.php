@@ -9,57 +9,55 @@
     <div class="row">
         <div class="col-4">
         
-            <div class="col-md-15">
-                <div class="card bg-white text-white shadow-lg rounded">
+        <div class="col-md-15">
+    <div class="card bg-white text-dark shadow-lg rounded">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <div class="chart">
+            <!-- Canvas para el gráfico de líneas -->
+            <canvas id="chart-line" class="chart-canvas" height="300" width="606"></canvas>
+        </div>
 
-                    <div class="chart">
-                        <!-- Canvas para el gráfico de líneas -->
-                        <canvas id="chart-line" class="chart-canvas" height="300" width="606"></canvas>
-                    </div>
+        <script>
+            // Datos para el gráfico de líneas
+            const labels = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'];
+            const data = {
+                labels: labels,
+                datasets: [{
+                    label: 'Voluntarios Mensuales',
+                    data: [20, 30, 45, 60, 80, 100],
+                    borderColor: 'rgb(75, 192, 192)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    tension: 0.4
+                }]
+            };
 
-                    <script>
-                        // Datos para el gráfico de líneas
-                        const labels = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'];
-                        const data = {
-                            labels: labels,
-                            datasets: [{
-                                    label: 'Ventas mensuales',
-                                    data: [100, 10, 150, 250, 180, 220],
-                                    borderColor: 'rgb(75, 192, 192)',
-                                    tension: 0.4
-                                },
-                                {
-                                    label: 'Otra línea',
-                                    data: [50, 30, 80, 120, 90, 110],
-                                    borderColor: 'rgb(255, 99, 132)',
-                                    tension: 0.4
-                                }
-                            ]
-                        };
+            // Configuración del gráfico de líneas
+            const config = {
+                type: 'line',
+                data: data,
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            };
 
-                        // Configuración del gráfico de líneas
-                        const config = {
-                            type: 'line',
-                            data: data,
-                            options: {
-                                scales: {
-                                    y: {
-                                        beginAtZero: true
-                                    }
-                                }
-                            }
-                        };
+            // Crear el gráfico de líneas en el canvas con el ID 'chart-line'
+            var myChartLine = new Chart(
+                document.getElementById('chart-line'),
+                config
+            );
+        </script>
 
-                        // Crear el gráfico de líneas en el canvas con el ID 'chart-line'
-                        var myChartLine = new Chart(
-                            document.getElementById('chart-line'),
-                            config
-                        );
-                    </script>
-                </div>
-            </div>
+        <div class="card-body">
+            <h5 class="card-title mt-3">Voluntarios Mensuales</h5>
+        </div>
+    </div>
+</div>
+
 
         </div>
         <div class="col">
@@ -131,349 +129,56 @@
             </div>
         </div>
         <div class="col-md-5">
-            <div class="card bg-white text-white shadow-lg rounded">
-                <div class="card-body">
-                    <div>
-                        <canvas id="myChart"></canvas>
-                    </div>
-                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-                    <script>
-                        const ctx = document.getElementById('myChart');
-                        new Chart(ctx, {
-                            type: 'bar',
-                            data: {
-                                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                                datasets: [{
-                                    label: '# of Votes',
-                                    data: [10, 19, 3, 5, 2, 3],
-                                    borderWidth: 1
-                                }]
-                            },
-                            options: {
-                                scales: {
-                                    y: {
-                                        beginAtZero: true
-                                    }
-                                }
+    <div class="card bg-white text-dark shadow-lg rounded">
+        <div class="card-body">
+            <div>
+                <canvas id="userVisitsChart"></canvas>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                const ctx = document.getElementById('userVisitsChart');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                        datasets: [{
+                            label: 'Number of User Visits',
+                            data: [120, 150, 180, 200, 170, 190],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
                             }
-                        });
-                    </script>
-                </div>
-            </div>
+                        }
+                    }
+                });
+            </script>
+            <h5 class="card-title mt-3">Visitas de Usuarios</h5>
         </div>
     </div>
-    <div class="row">
+</div>
 
-        <div class="col-md-9">
-            <div class="card bg-white text-white shadow-lg rounded">
-                <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
-                    <div class="card-header pb-0">
-                        <div class="row">
-                            <div class="col-lg-6 col-7">
-                                <h6>Projects</h6>
-                                <p class="text-sm mb-0">
-                                    <i class="fa fa-check text-info" aria-hidden="true"></i>
-                                    <span class="font-weight-bold ms-1">30 done</span> this month
-                                </p>
-                            </div>
-                            <div class="col-lg-6 col-5 my-auto text-end">
-                                <div class="dropdown float-lg-end pe-4">
-                                    <a class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        <i class="fa fa-ellipsis-v text-secondary" aria-hidden="true"></i>
-                                    </a>
-                                    <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable">
-                                        <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a>
-                                        </li>
-                                        <li><a class="dropdown-item border-radius-md" href="javascript:;">Another
-                                                action</a></li>
-                                        <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else
-                                                here</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body px-0 pb-2">
-                        <div class="table-responsive">
-                            <table class="table align-items-center mb-0">
-                                <thead>
-                                    <tr>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Companies</th>
-                                        <th
-                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                            Members</th>
-                                        <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Budget</th>
-                                        <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Completion</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex px-2 py-1">
-                                                <div class="d-flex flex-column justify-content-center">
-                                                    <h6 class="mb-0 text-sm">Soft UI XD Version</h6>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="avatar-group mt-2">
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                                                    data-bs-original-title="Ryan Tompson">
-                                                    <img src="../assets/img/team-1.jpg" alt="team1">
-                                                </a>
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                                                    data-bs-original-title="Romina Hadid">
-                                                    <img src="../assets/img/team-2.jpg" alt="team2">
-                                                </a>
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                                                    data-bs-original-title="Alexander Smith">
-                                                    <img src="../assets/img/team-3.jpg" alt="team3">
-                                                </a>
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                                                    data-bs-original-title="Jessica Doe">
-                                                    <img src="../assets/img/team-4.jpg" alt="team4">
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td class="align-middle text-center text-sm">
-                                            <span class="text-xs font-weight-bold"> $14,000 </span>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="progress-wrapper w-75 mx-auto">
-                                                <div class="progress-info">
-                                                    <div class="progress-percentage">
-                                                        <span class="text-xs font-weight-bold">75%</span>
-                                                    </div>
-                                                </div>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-gradient-info w-75" role="progressbar"
-                                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex px-2 py-1">
-                                                <div class="d-flex flex-column justify-content-center">
-                                                    <h6 class="mb-0 text-sm">Add Progress Track</h6>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="avatar-group mt-2">
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                                                    data-bs-original-title="Romina Hadid">
-                                                    <img src="../assets/img/team-2.jpg" alt="team5">
-                                                </a>
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                                                    data-bs-original-title="Jessica Doe">
-                                                    <img src="../assets/img/team-4.jpg" alt="team6">
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td class="align-middle text-center text-sm">
-                                            <span class="text-xs font-weight-bold"> $3,000 </span>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="progress-wrapper w-75 mx-auto">
-                                                <div class="progress-info">
-                                                    <div class="progress-percentage">
-                                                        <span class="text-xs font-weight-bold">75%</span>
-                                                    </div>
-                                                </div>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-gradient-info w-75" role="progressbar"
-                                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex px-2 py-1">
-                                                <div class="d-flex flex-column justify-content-center">
-                                                    <h6 class="mb-0 text-sm">Fix Platform Errors</h6>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="avatar-group mt-2">
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                                                    data-bs-original-title="Romina Hadid">
-                                                    <img src="../assets/img/team-3.jpg" alt="team8">
-                                                </a>
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                                                    data-bs-original-title="Jessica Doe">
-                                                    <img src="../assets/img/team-1.jpg" alt="team9">
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td class="align-middle text-center text-sm">
-                                            <span class="text-xs font-weight-bold"> Not set </span>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="progress-wrapper w-75 mx-auto">
-                                                <div class="progress-info">
-                                                    <div class="progress-percentage">
-                                                        <span class="text-xs font-weight-bold">100%</span>
-                                                    </div>
-                                                </div>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-gradient-success w-100" role="progressbar"
-                                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex px-2 py-1">
-                                                <div class="d-flex flex-column justify-content-center">
-                                                    <h6 class="mb-0 text-sm">Launch our Mobile App</h6>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="avatar-group mt-2">
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                                                    data-bs-original-title="Ryan Tompson">
-                                                    <img src="../assets/img/team-4.jpg" alt="user1">
-                                                </a>
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                                                    data-bs-original-title="Romina Hadid">
-                                                    <img src="../assets/img/team-3.jpg" alt="user2">
-                                                </a>
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                                                    data-bs-original-title="Alexander Smith">
-                                                    <img src="../assets/img/team-4.jpg" alt="user3">
-                                                </a>
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                                                    data-bs-original-title="Jessica Doe">
-                                                    <img src="../assets/img/team-1.jpg" alt="user4">
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td class="align-middle text-center text-sm">
-                                            <span class="text-xs font-weight-bold"> $20,500 </span>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="progress-wrapper w-75 mx-auto">
-                                                <div class="progress-info">
-                                                    <div class="progress-percentage">
-                                                        <span class="text-xs font-weight-bold">100%</span>
-                                                    </div>
-                                                </div>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-gradient-success w-100" role="progressbar"
-                                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex px-2 py-1">
-                                                <div class="d-flex flex-column justify-content-center">
-                                                    <h6 class="mb-0 text-sm">Add the New Pricing Page</h6>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="avatar-group mt-2">
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                                                    data-bs-original-title="Ryan Tompson">
-                                                    <img src="../assets/img/team-4.jpg" alt="user5">
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td class="align-middle text-center text-sm">
-                                            <span class="text-xs font-weight-bold"> $500 </span>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="progress-wrapper w-75 mx-auto">
-                                                <div class="progress-info">
-                                                    <div class="progress-percentage">
-                                                        <span class="text-xs font-weight-bold">25%</span>
-                                                    </div>
-                                                </div>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-gradient-info w-25" role="progressbar"
-                                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="25">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex px-2 py-1">
-                                                <div class="d-flex flex-column justify-content-center">
-                                                    <h6 class="mb-0 text-sm">Redesign New Online Shop</h6>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="avatar-group mt-2">
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                                                    data-bs-original-title="Ryan Tompson">
-                                                    <img src="../assets/img/team-1.jpg" alt="user6">
-                                                </a>
-                                                <a href="javascript:;" class="avatar avatar-xs rounded-circle"
-                                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                                                    data-bs-original-title="Jessica Doe">
-                                                    <img src="../assets/img/team-4.jpg" alt="user7">
-                                                </a>
-                                            </div>
-                                        </td>
-                                        <td class="align-middle text-center text-sm">
-                                            <span class="text-xs font-weight-bold"> $2,000 </span>
-                                        </td>
-                                        <td class="align-middle">
-                                            <div class="progress-wrapper w-75 mx-auto">
-                                                <div class="progress-info">
-                                                    <div class="progress-percentage">
-                                                        <span class="text-xs font-weight-bold">50%</span>
-                                                    </div>
-                                                </div>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-gradient-info w-50" role="progressbar"
-                                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="50">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+   
 @stop
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">

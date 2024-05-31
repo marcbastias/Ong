@@ -31,15 +31,15 @@
         <div class="flex flex-col space-y-8 p-8 ">
             <div class="text-center text-2xl">
                 <p class="font-bold">Cuidados Intensivos</p>
-                <p class="mt-2">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500. Ha sobrevivido 500 años.</p>
+                <p class="mt-2">Los cuidados intensivos en los animales son esenciales para aquellos que se encuentran en situaciones críticas de salud. Estos cuidados se llevan a cabo en unidades especializadas, equipadas con tecnología avanzada y personal veterinario capacitado para manejar emergencias. Los animales en cuidados intensivos pueden necesitar monitoreo constante, administración de medicamentos intravenosos, soporte respiratorio y tratamientos específicos para enfermedades graves. La meta principal es estabilizar al animal, aliviar el dolor y tratar las condiciones subyacentes para que puedan recuperarse completamente.</p>
             </div>
             <div class="text-center text-2xl">
                 <p class="font-bold">Adoptaciones</p>
-                <p class="mt-2">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500. Ha sobrevivido 500 años.</p>
+                <p class="mt-2">La adopción de mascotas es un proceso que busca encontrar hogares permanentes y amorosos para animales que han sido rescatados o que han quedado sin hogar. Los refugios y organizaciones de rescate animal trabajan arduamente para asegurar que las mascotas estén saludables y bien cuidadas antes de ser adoptadas. El proceso de adopción incluye la evaluación de los posibles adoptantes, asegurando que sean aptos para cuidar de la mascota, y educándolos sobre las necesidades específicas del animal. Adoptar una mascota no solo brinda un hogar a un animal necesitado, sino que también enriquece la vida del adoptante con la compañía y el amor de un nuevo amigo peludo.</p>
             </div>
             <div class="text-center text-2xl">
                 <p class="font-bold">Rescate</p>
-                <p class="mt-2">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500. Ha sobrevivido 500 años.</p>
+                <p class="mt-2">El rescate de animales se refiere a las acciones tomadas para salvar a los animales que están en situaciones de peligro o que viven en condiciones inadecuadas. Estas operaciones pueden incluir el rescate de animales abandonados, maltratados o afectados por desastres naturales. Las organizaciones de rescate animal trabajan en colaboración con autoridades locales y comunidades para identificar y rescatar a estos animales. Una vez rescatados, los animales reciben atención médica, rehabilitación y, eventualmente, se buscan hogares permanentes para ellos. El objetivo principal del rescate animal es asegurar el bienestar de los animales y mejorar sus condiciones de vida, proporcionando una segunda oportunidad para vivir en un entorno seguro y amoroso.</p>
             </div>
         </div>
     </div>
