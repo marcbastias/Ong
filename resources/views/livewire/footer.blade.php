@@ -15,13 +15,20 @@
     
     <div class="flex justify-center py-8 ">
         <ul class="flex gap-40">
-            <li><a href="/" class="text-white hover:text-black">Company</a></li>
-            <li><a href="/" class="text-white hover:text-black">About Us</a></li>
-            <li><a href="privacidad/terminos-condiciones" class="text-white hover:text-black">Terms & Conditions</a>
+            <li><a href="/somos" class="text-white hover:text-black">Compañía</a></li>
+            <li><a href="/somos" class="text-white hover:text-black">Sobre nosotros</a></li>
+            <li><a href="privacidad/terminos-condiciones" class="text-white hover:text-black">Términos y condiciones</a>
             </li>
-            <li><a href="privacidad/politica-privacidad" class="text-white hover:text-black">Privacy policy</a></li>
+            <li><a href="privacidad/politica-privacidad" class="text-white hover:text-black">Política de privacidad</a></li>
             <li><a href="privacidad/cookies" class="text-white hover:text-black">Cookies</a></li>
-            <li><a href="/contact" class="text-white hover:text-black">Support</a></li>
+            <li><a href="/contacto" class="text-white hover:text-black">Soporte
+
+
+
+
+
+
+</a></li>
         </ul>
     </div>
     <style>
