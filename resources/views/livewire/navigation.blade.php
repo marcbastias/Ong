@@ -34,11 +34,11 @@
                 <li class="relative">
                     <a href="#" class="text-white hover:text-black" onclick="toggleDropdown(event, 'colabora')">Colabora</a>
                     <div id="colabora" class="absolute bg-white p-4 rounded-md shadow-lg hidden border border-gray-300 z-10 transform origin-top transition-all duration-300 ease-in-out scale-y-0" data-visible="false" onclick="event.stopPropagation()">
-                        <a href="/colabora/adopta" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Adopta</a>
+                        <a href="/colabora/animalesExplotados" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Donar</a>
+                        <div class="border-t border-gray-300"></div>
+                        <a href="/colabora/adopta" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Adoptar</a>
                         <div class="border-t border-gray-300"></div>
                         <a href="/colabora/animalesAmenazados" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Animales amenazados</a>
-                        <div class="border-t border-gray-300"></div>
-                        <a href="/colabora/animalesExplotados" class="block text-gray-800 py-2 px-4 transition-colors duration-300">Animales explotados</a>
                     </div>
                 </li>
                 <li class="relative">

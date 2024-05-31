@@ -72,11 +72,12 @@
         </div>
     </div>
     <div class="pb-4 flex justify-center items-center">
-        <button
-            style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">
-            ÚNETE
-        </button>
-    </div>
+    <a href="/colabora/adopta"
+        style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; text-decoration: none;">
+        ÚNETE
+    </a>
+</div>
+
 
     <div class="mt-2 p-16">
         <div class="flex items-center ">

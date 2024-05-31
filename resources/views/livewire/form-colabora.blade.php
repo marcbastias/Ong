@@ -136,7 +136,7 @@
 
 <body>
 
-    <div class="mt-80 flex justify-center items-center h-full">
+    <div class="mt-80 flex justify-center items-center h-full" >
         <div class="p-8 bg-[#A7DD7D] shadow-md" style="width: 800px;">
             <h1 class="text-white text-3xl font-bold mb-8 text-center">HAZTE SOCIO</h1>
             <div class="gap-28 p-5 mb-8 flex justify-center">
@@ -214,7 +214,6 @@
             }
         }
 
-        // Función para actualizar el valor de la cantidad a donar
         function updateAmount() {
             var rangeValue = document.getElementById('cantidad').value;
             document.getElementById('cantidad-value').textContent = "$" + rangeValue;
